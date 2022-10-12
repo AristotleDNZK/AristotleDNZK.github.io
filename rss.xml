@@ -7,9 +7,9 @@
         <language>zh-CN</language>
         <pubDate>Tue, 11 Oct 2022 19:30:59 +0800</pubDate>
         <lastBuildDate>Tue, 11 Oct 2022 19:30:59 +0800</lastBuildDate>
-        <category>阅读笔记</category>
         <category>转码之路</category>
         <category>哲学社科</category>
+        <category>阅读笔记</category>
         <item>
             <guid isPermalink="true">http://example.com/2022/10/11/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB/</guid>
             <title>亲密关系</title>
@@ -85,9 +85,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/10/11/%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF/</guid>
+            <guid isPermalink="true">http://example.com/2022/10/11/computer-science/%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF/</guid>
             <title>转码之路</title>
-            <link>http://example.com/2022/10/11/%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF/</link>
+            <link>http://example.com/2022/10/11/computer-science/%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF/</link>
             <category>转码之路</category>
             <pubDate>Tue, 11 Oct 2022 19:26:24 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;转码之路&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#转码之路&#34;&gt;#&lt;/a&gt; 转码之路&lt;/h1&gt;

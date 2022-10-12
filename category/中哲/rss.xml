@@ -1,17 +1,22 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://example.com</id>
-    <title> • Posts by &#34;哲学社科&#34; category</title>
-    <link href="http://example.com" />
-    <updated>2022-10-11T11:29:15.000Z</updated>
-    <category term="转码之路" />
-    <category term="哲学社科" />
-    <category term="阅读笔记" />
-    <entry>
-        <id>http://example.com/2022/10/11/philosophy/%E7%8E%8B%E9%98%B3%E6%98%8E%E5%BF%83%E5%AD%A6/</id>
-        <title>王阳明心学</title>
-        <link rel="alternate" href="http://example.com/2022/10/11/philosophy/%E7%8E%8B%E9%98%B3%E6%98%8E%E5%BF%83%E5%AD%A6/"/>
-        <content type="html">&lt;h1 id=&#34;王阳明心学&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#王阳明心学&#34;&gt;#&lt;/a&gt; 王阳明心学&lt;/h1&gt;
+<rss version="2.0">
+    <channel>
+        <title> • Posts by &#34;中哲&#34; category</title>
+        <link>http://example.com</link>
+        <description>思及我域</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 11 Oct 2022 19:29:15 +0800</pubDate>
+        <lastBuildDate>Tue, 11 Oct 2022 19:29:15 +0800</lastBuildDate>
+        <category>转码之路</category>
+        <category>哲学社科</category>
+        <category>阅读笔记</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2022/10/11/philosophy/%E7%8E%8B%E9%98%B3%E6%98%8E%E5%BF%83%E5%AD%A6/</guid>
+            <title>王阳明心学</title>
+            <link>http://example.com/2022/10/11/philosophy/%E7%8E%8B%E9%98%B3%E6%98%8E%E5%BF%83%E5%AD%A6/</link>
+            <category>哲学社科</category>
+            <pubDate>Tue, 11 Oct 2022 19:29:15 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;王阳明心学&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#王阳明心学&#34;&gt;#&lt;/a&gt; 王阳明心学&lt;/h1&gt;
 &lt;p&gt;一、人具有无限心&lt;/p&gt;
 &lt;p&gt;       人作为时间性存在，总是以筹划尚不存在的未来的形式活在当下 —— 证明了人心的无限性 —— 能超越现实；因而烦恼从中来。&lt;br&gt;
 关键在于安顿无限心。在官场上，中国政治的传统模式一天不变，中南海和秦城监狱之间就一步之遥。高官俸禄之有限，&lt;strong&gt;而无限心无法安顿在有限的事物上，因为现实世界的事物无一不是有限的。因此无限心只能安顿在超越现实的世界中（出世 —— 从现实世界的利害中超拔出来），而无法安顿在现实世界中&lt;/strong&gt;。&lt;/p&gt;
@@ -28,8 +33,7 @@
 &lt;p&gt;佛学中国化：禅宗 16 字法门：教外别传，不立文字，直指人心，见性成佛&lt;br&gt;
 不求出离生死之苦海，自性若迷。不睹众相常观金体。六色 —— 眼耳鼻舌身意 —— 着项；观金体本身 —— 不住相。佛法在世间，不离世间觉。离世觅菩提，恰如求兔角&lt;/p&gt;
 &lt;p&gt;《金刚经》核心思想 ——&lt;strong&gt; 因无所住而生其心&lt;/strong&gt;&lt;/p&gt;
-</content>
-        <category term="哲学社科" />
-        <updated>2022-10-11T11:29:15.000Z</updated>
-    </entry>
-</feed>
+ ]]></description>
+        </item>
+    </channel>
+</rss>
