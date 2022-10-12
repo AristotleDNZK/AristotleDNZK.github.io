@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title> • Posts by &#34;gan课题&#34; tag</title>
+    <link href="http://example.com" />
+    <updated>2022-10-12T13:34:29.000Z</updated>
+    <category term="阅读笔记" />
+    <category term="言" />
+    <category term="GAN课题" />
+    <category term="转码之路" />
+    <category term="哲学社科" />
+    <entry>
+        <id>http://example.com/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/</id>
+        <title>生成对抗网络</title>
+        <link rel="alternate" href="http://example.com/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/"/>
+        <content type="html">&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2k2WXVRZkcyTkUxaGJienRpUkJMWGU=&#34;&gt;GAN 开山之作论文&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8yNjczNTkzMy9hcnRpY2xlL2RldGFpbHMvMTA4OTI1MjMy&#34;&gt;https://blog.csdn.net/weixin_26735933/article/details/108925232&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zNzg1MjEzODM=&#34;&gt;https://zhuanlan.zhihu.com/p/378521383&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;GAN 架构包含两个子模式，分别称为&lt;strong&gt; Generator (G) 和&lt;/strong&gt; Discriminator (D) ，它们相互竞争，目的是通过训练过程达到 Nash 平衡。 生成器学习将潜在空间 (例如，噪声〜N &lt;em&gt;(0,1)&lt;/em&gt; ) 映射到在其上分发给定数据样本的数据空间，鉴别器评估生成器完成的映射。 生成器的主要作用是生成模仿训练数据集的合成数据，以使鉴别器无法将合成数据与真实数据区分开。&lt;/p&gt;
+&lt;p&gt;生成器的输入是随机噪声矢量_x’_ (通常是均匀或正态分布)。 噪声向量通过 Generator 映射到新的数据空间，以获得伪样本_G (x’)_ ，它是多维向量。 鉴别器是一个二进制分类器，它吸收了生成的数据集和训练的数据集，并学习将它们分类为假的和真实的。** 当判别器无法确定数据来自真实数据集还是生成器时，便会达到 GAN 模型的最佳状态 **&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/pSoih4oE9yFozGUVuiqZwi/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;可解释的生成对抗网络infogan&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可解释的生成对抗网络infogan&#34;&gt;#&lt;/a&gt; 可解释的生成对抗网络：InfoGAN&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC81NTk0NTE2NA==&#34;&gt;https://zhuanlan.zhihu.com/p/55945164&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC81NDA5NjM4MQ==&#34;&gt;生成对抗网络 (GAN) 背后的数学理论&lt;/span&gt; 提到，generator 和 discriminator 的对抗学习，它的目标其实是得到一个与 real data 分布一致的 fake data 分布。&lt;/p&gt;
+&lt;p&gt;但是由于 generator 的输入是一个&lt;strong&gt;连续的噪声信号&lt;/strong&gt;，并且&lt;strong&gt;没有任何约束&lt;/strong&gt;，导致 GAN 将 z 的具体维度与 output 的语义特征对应起来，可解释性很差。&lt;/p&gt;
+&lt;p&gt;它的原理很简单，在 info GAN 里面，把输入向量 z 分成两部分，c 和 z’。c 可以理解为可解释的隐变量，而 z 可以理解为不可压缩的噪声。希望通过约束 c 与 output 的关系，&lt;strong&gt;使得隐变量 c 的维度对应 output 的语义特征&lt;/strong&gt;，以手写数字为例，比如笔画粗细，倾斜度等。&lt;/p&gt;
+&lt;p&gt;为了引入 c，作者&lt;strong&gt;通过互信息的方式来对 c 进行约束&lt;/strong&gt;，也可以理解成自编码的过程。具体的操作是，generator 的 output，经过一个分类器，看是否能够得到 c。其实可以看成一个 anto-encoder 的反过程。其余的 discriminator 与常规的 GAN 是一样的。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://pic1.zhimg.com/80/v2-b85a31bbe8ed2b42a3ad11a707720674_720w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;图片来自李宏毅老师生成对抗网络视频 https://www.youtube.com/watch?v=DMA4MrNieWo&amp;amp;list=PLJV_el3uVTsMq6JEFPW35BCiOQTsoqwNw&amp;amp;index=5&lt;/p&gt;
+&lt;p&gt;在实际过程中，classifier 和 discriminator 会共享参数，只有最后一层是不一样的，classifier 输出的是一个 vector, discriminator 输出的是一个标量。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;第一章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一章&#34;&gt;#&lt;/a&gt; 第一章：&lt;/h2&gt;
+&lt;p&gt;生成器的优点在于生成很容易，但只学习了真实样本的表象，只学到了 component 和 component 像素和像素之间的相似度，而没有学到图像和图像的关联。可以用生成器取代下面方程，产生负样本，产生 x~&lt;/p&gt;
+&lt;p&gt;以往是通过高斯混合模型定义 PG 然后用最大似然估计算出最优分布 PG 下的参数 sita，但这个模型可能更复杂，不用高斯…… 又难以计算。而现在用生成器找到一个分布，也就是用生成器可以生成一个很复杂的分布 PG。&lt;strong&gt;生成器 G 意图让生成的样本 PG 和真实样本 Pdata 之间的散度越小越好&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/nJGAp4UV1RF1nuDeWqVQ69/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;PG 可以通过生成器的向量中生成，一张张图片，Pdata 可以通过真实数据集采样得到 那么如何通过生成器计算 PG 和 Pdata 的散度呢&lt;/p&gt;
+&lt;p&gt;判别器优点在于能够学到整个图像的关联，但很难生成图像，需要解 x~=arg max D (x）方程&lt;/p&gt;
+&lt;p&gt;1. 如何训练判别器 D 呢，首先固定 G，寻找让 max V (G,D) 的 D,。对每一个 x，都可以找一个不同的 D 让式子最大&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/eXSZqZfenTQMi81R31MB9/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/8kJUGdgeCEpjk6PQNytwaA/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/tLFB6bFnEXT2M3YHgA8mpC/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第一步：固定 G，寻找 D，让 V 函数 max 第二步：在寻找到的 D 基础上固定不动，寻找让 maxV 最小的 G&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/3EA6zaGNngsbPAzqGY5y1y/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;第四章基础理论&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第四章基础理论&#34;&gt;#&lt;/a&gt; 第四章：基础理论&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/bqo7AayLPxFkVxuCRis5zE/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;首先给定 G，找到 D&lt;em&gt; 并求出 V 对 sitaG 的梯度，用于更新 sitaG 找一个 D&lt;/em&gt; 从而 maxV 的过程就是找到 Pdata 和 PG 之间的 JS 散度 V (G1,D1*) 的过程&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/dV2swuC8a28CS4VfGDaZht/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;关键是：&lt;strong&gt;当更新 G0 后函数 V 可能会变化&lt;/strong&gt;，而此时的 D*（使 V 最大的横坐标位置）可能就变了，再用之前的 D * 训练就不靠谱。因此只能每次更新 G 一点点，假设每次更新后函数变化很小和之前是类似的，因此不太可能出现右图情况。 &lt;strong&gt;因此生成器 G 不能训练太多，通常只更新一次&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/xbN23FioNDynxriujmQFJZ/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;期望 E 计算：实际上只能通过离散叠加求均值的方法来计算 V，实际上是从 Pdata 和 PG 中采样出一堆 x 来代替期望 E，训练一个二分类分类器→最小化交叉熵 = maxV&lt;/p&gt;
+&lt;p&gt;训练判别器的目的是：为了评估 JS 散度 从 Pdata 中采用出一堆 x 作为正样本，从 PG 中采样出一堆 x 作为负样本&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/7AT2kMos9ygmSLMdMvccww/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;每轮训练迭代过程：&lt;/p&gt;
+&lt;p&gt;1. 根据 Pdata（x）中采样 m 个 x，从先验分布中采样 m 个噪声向量 z→输入生成器→得到 m 个生成样本，更新判别器参数 sitad 从而→maxV&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;训练判别器目的&lt;/strong&gt;：为了估计 JS 散度才训练判别器，而用于估计 JS 散度的最优判别器的目标函数 V 是最大的，为了使其最大必定需要多轮重复迭代训练→直到收敛→&lt;strong&gt;可以更新 k 次&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;** 训练生成器目的：** 为了最小化 JS 散度，而由于生成器每次训练会导致目标函数变化，&lt;strong&gt;因此每次只训练更新一次&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/w971ot17oG8iSzZTphWndg/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;fgan框架&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#fgan框架&#34;&gt;#&lt;/a&gt; fGAN 框架&lt;/h2&gt;
+&lt;p&gt;用不同 f - 散度量生成样本和真实样本的差距 p (x) 和 q（x）分别代表从 x 从 p 分布和从 q 分布采样出来的几率 p 和 q 之间的散度：&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;info-ganvae-gan-bigan&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#info-ganvae-gan-bigan&#34;&gt;#&lt;/a&gt; Info GAN,VAE GAN, BiGAN&lt;/h2&gt;
+&lt;p&gt;编码器和解码器输入输出不相连，判别器输入 z 和图像，判断是来自编码器还是解码器&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/o4UXQGEAthzwVS7ZcWaWUi/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/tcLaeqdUR9ZqxFeGgQTbVK/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="GAN课题" />
+        <updated>2022-10-12T13:34:29.000Z</updated>
+    </entry>
+</feed>
