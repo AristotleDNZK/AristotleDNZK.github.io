@@ -149,6 +149,22 @@
         <updated>2022-10-11T11:26:24.000Z</updated>
     </entry>
     <entry>
+        <id>http://example.com/2022/10/11/%E8%BF%9C%E8%A1%8C%E8%80%85%E5%BC%80%E7%AF%87/</id>
+        <title></title>
+        <link rel="alternate" href="http://example.com/2022/10/11/%E8%BF%9C%E8%A1%8C%E8%80%85%E5%BC%80%E7%AF%87/"/>
+        <content type="html">&lt;hr&gt;
+&lt;h2 id=&#34;title-远行者开篇date-2022-10-11-112030categories-言tags-言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#title-远行者开篇date-2022-10-11-112030categories-言tags-言&#34;&gt;#&lt;/a&gt; title: 远行者开篇&lt;br&gt;
+ date: 2022-10-11 11:20:30&lt;br&gt;
+categories: 言&lt;br&gt;
+ tags: 言&lt;/h2&gt;
+&lt;h2 id=&#34;初衷&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#初衷&#34;&gt;#&lt;/a&gt; 初衷&lt;/h2&gt;
+&lt;p&gt;抱着将博客作为云笔记软件来用的想法，历时两天才醒悟，还是继续当个牌面吧……&lt;/p&gt;
+&lt;h3 id=&#34;后续&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#后续&#34;&gt;#&lt;/a&gt; 后续&lt;/h3&gt;
+&lt;p&gt;Maybe 日后还有别的用途？比如不定期更新个人读书笔记、随想录之类……&lt;/p&gt;
+</content>
+        <updated>2022-10-11T03:55:33.296Z</updated>
+    </entry>
+    <entry>
         <id>http://example.com/2022/10/09/hello-world/</id>
         <title>Hello World</title>
         <link rel="alternate" href="http://example.com/2022/10/09/hello-world/"/>
