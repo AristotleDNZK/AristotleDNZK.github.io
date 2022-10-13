@@ -7,11 +7,11 @@
         <language>zh-CN</language>
         <pubDate>Wed, 12 Oct 2022 21:34:29 +0800</pubDate>
         <lastBuildDate>Wed, 12 Oct 2022 21:34:29 +0800</lastBuildDate>
-        <category>言</category>
         <category>阅读笔记</category>
+        <category>言</category>
         <category>GAN课题</category>
-        <category>哲学社科</category>
         <category>转码之路</category>
+        <category>哲学社科</category>
         <item>
             <guid isPermalink="true">http://example.com/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/</guid>
             <title>生成对抗网络</title>
