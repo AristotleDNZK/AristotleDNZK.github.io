@@ -3,12 +3,24 @@
     <id>http://example.com</id>
     <title> • Posts by &#34;gan课题&#34; category</title>
     <link href="http://example.com" />
-    <updated>2022-10-12T13:34:29.000Z</updated>
-    <category term="阅读笔记" />
-    <category term="言" />
+    <updated>2022-10-14T08:29:02.000Z</updated>
     <category term="GAN课题" />
-    <category term="转码之路" />
+    <category term="言" />
     <category term="哲学社科" />
+    <category term="阅读笔记" />
+    <category term="转码之路" />
+    <entry>
+        <id>http://example.com/2022/10/14/GAN%E8%AF%BE%E9%A2%98/%E7%9B%B8%E6%9C%BA%E6%89%8B%E7%9C%BC%E6%A0%87%E5%AE%9A/</id>
+        <title>相机手眼标定</title>
+        <link rel="alternate" href="http://example.com/2022/10/14/GAN%E8%AF%BE%E9%A2%98/%E7%9B%B8%E6%9C%BA%E6%89%8B%E7%9C%BC%E6%A0%87%E5%AE%9A/"/>
+        <content type="html">&lt;h2 id=&#34;1-眼在手上的手眼标定&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-眼在手上的手眼标定&#34;&gt;#&lt;/a&gt; 1、眼在手上的手眼标定&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://img-blog.csdnimg.cn/dc166d3e745d411b8deff1c07d6bca08.png&#34; alt=&#34;眼在手上的手眼标定&#34;&gt;&lt;/p&gt;
+&lt;p&gt;基础坐标系（用 base 表示） 是机器臂的基底坐标系，末端坐标系（用 end 表示） 是机器臂的末端坐标系， 相机坐标系（用 cam 表示） 是固定在机器臂上面的相机自身坐标系，标定物坐标系（用 cal 表示）是标定板所在的坐标系。任意移动两次机器臂，由于标定板和机器臂的基底是不动的，因此对于某个世界点，其在 base 坐标系和 cal 坐标系下的坐标值不变，在 end 坐标系和 cam 坐标系下的坐标值随着机器臂的运动而改变。根据这一关系，可以求解出 end 坐标系和 cam 坐标系之间的转换矩阵。&lt;/p&gt;
+&lt;hr&gt;
+</content>
+        <category term="GAN课题" />
+        <updated>2022-10-14T08:29:02.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/</id>
         <title>生成对抗网络</title>
