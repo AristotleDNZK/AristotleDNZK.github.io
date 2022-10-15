@@ -10,8 +10,267 @@
         </author>
         <description>思及我域</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 09 Oct 2022 20:55:06 +0800</pubDate>
-        <lastBuildDate>Sun, 09 Oct 2022 20:55:06 +0800</lastBuildDate>
+        <pubDate>Sat, 15 Oct 2022 10:23:58 +0800</pubDate>
+        <lastBuildDate>Sat, 15 Oct 2022 10:23:58 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/15/bug/</guid>
+            <title>bug</title>
+            <link>https://aristotlednzk.github.io.com/2022/10/15/bug/</link>
+            <category term="bug" scheme="https://aristotlednzk.github.io.com/categories/bug/" />
+            <category term="bug" scheme="https://aristotlednzk.github.io.com/tags/bug/" />
+            <pubDate>Sat, 15 Oct 2022 10:23:58 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;bug&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#bug&#34;&gt;#&lt;/a&gt; bug&lt;/h1&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/14/GAN%E8%AF%BE%E9%A2%98/%E7%9B%B8%E6%9C%BA%E6%89%8B%E7%9C%BC%E6%A0%87%E5%AE%9A/</guid>
+            <title>相机手眼标定</title>
+            <link>https://aristotlednzk.github.io.com/2022/10/14/GAN%E8%AF%BE%E9%A2%98/%E7%9B%B8%E6%9C%BA%E6%89%8B%E7%9C%BC%E6%A0%87%E5%AE%9A/</link>
+            <category term="GAN课题" scheme="https://aristotlednzk.github.io.com/categories/GAN%E8%AF%BE%E9%A2%98/" />
+            <category term="GAN课题" scheme="https://aristotlednzk.github.io.com/tags/GAN%E8%AF%BE%E9%A2%98/" />
+            <pubDate>Fri, 14 Oct 2022 16:29:02 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;1-眼在手上的手眼标定&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-眼在手上的手眼标定&#34;&gt;#&lt;/a&gt; 1、眼在手上的手眼标定&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://img-blog.csdnimg.cn/dc166d3e745d411b8deff1c07d6bca08.png&#34; alt=&#34;眼在手上的手眼标定&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;基础坐标系（用 base 表示） 是机器臂的基底坐标系，末端坐标系（用 end 表示） 是机器臂的末端坐标系， 相机坐标系（用 cam 表示） 是固定在机器臂上面的相机自身坐标系，标定物坐标系（用 cal 表示）是标定板所在的坐标系。任意移动两次机器臂，由于标定板和机器臂的基底是不动的，因此对于某个世界点，其在 base 坐标系和 cal 坐标系下的坐标值不变，在 end 坐标系和 cam 坐标系下的坐标值随着机器臂的运动而改变。根据这一关系，可以求解出 end 坐标系和 cam 坐标系之间的转换矩阵。&lt;/p&gt;
+&lt;hr /&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/</guid>
+            <title>生成对抗网络</title>
+            <link>https://aristotlednzk.github.io.com/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/</link>
+            <category term="GAN课题" scheme="https://aristotlednzk.github.io.com/categories/GAN%E8%AF%BE%E9%A2%98/" />
+            <category term="生成对抗网络" scheme="https://aristotlednzk.github.io.com/categories/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/" />
+            <category term="GAN课题" scheme="https://aristotlednzk.github.io.com/tags/GAN%E8%AF%BE%E9%A2%98/" />
+            <pubDate>Wed, 12 Oct 2022 21:34:29 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2k2WXVRZkcyTkUxaGJienRpUkJMWGU=&#34;&gt;GAN 开山之作论文&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8yNjczNTkzMy9hcnRpY2xlL2RldGFpbHMvMTA4OTI1MjMy&#34;&gt;https://blog.csdn.net/weixin_26735933/article/details/108925232&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zNzg1MjEzODM=&#34;&gt;https://zhuanlan.zhihu.com/p/378521383&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;GAN 架构包含两个子模式，分别称为&lt;strong&gt; Generator (G) 和&lt;/strong&gt; Discriminator (D) ，它们相互竞争，目的是通过训练过程达到 Nash 平衡。 生成器学习将潜在空间 (例如，噪声〜N &lt;em&gt;(0,1)&lt;/em&gt; ) 映射到在其上分发给定数据样本的数据空间，鉴别器评估生成器完成的映射。 生成器的主要作用是生成模仿训练数据集的合成数据，以使鉴别器无法将合成数据与真实数据区分开。&lt;/p&gt;
+&lt;p&gt;生成器的输入是随机噪声矢量_x&#39;_ (通常是均匀或正态分布)。 噪声向量通过 Generator 映射到新的数据空间，以获得伪样本_G (x&#39;)_ ，它是多维向量。 鉴别器是一个二进制分类器，它吸收了生成的数据集和训练的数据集，并学习将它们分类为假的和真实的。** 当判别器无法确定数据来自真实数据集还是生成器时，便会达到 GAN 模型的最佳状态 **&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/pSoih4oE9yFozGUVuiqZwi/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;可解释的生成对抗网络infogan&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可解释的生成对抗网络infogan&#34;&gt;#&lt;/a&gt; 可解释的生成对抗网络：InfoGAN&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC81NTk0NTE2NA==&#34;&gt;https://zhuanlan.zhihu.com/p/55945164&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC81NDA5NjM4MQ==&#34;&gt;生成对抗网络 (GAN) 背后的数学理论&lt;/span&gt; 提到，generator 和 discriminator 的对抗学习，它的目标其实是得到一个与 real data 分布一致的 fake data 分布。&lt;/p&gt;
+&lt;p&gt;但是由于 generator 的输入是一个&lt;strong&gt;连续的噪声信号&lt;/strong&gt;，并且&lt;strong&gt;没有任何约束&lt;/strong&gt;，导致 GAN 将 z 的具体维度与 output 的语义特征对应起来，可解释性很差。&lt;/p&gt;
+&lt;p&gt;它的原理很简单，在 info GAN 里面，把输入向量 z 分成两部分，c 和 z&#39;。c 可以理解为可解释的隐变量，而 z 可以理解为不可压缩的噪声。希望通过约束 c 与 output 的关系，&lt;strong&gt;使得隐变量 c 的维度对应 output 的语义特征&lt;/strong&gt;，以手写数字为例，比如笔画粗细，倾斜度等。&lt;/p&gt;
+&lt;p&gt;为了引入 c，作者&lt;strong&gt;通过互信息的方式来对 c 进行约束&lt;/strong&gt;，也可以理解成自编码的过程。具体的操作是，generator 的 output，经过一个分类器，看是否能够得到 c。其实可以看成一个 anto-encoder 的反过程。其余的 discriminator 与常规的 GAN 是一样的。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://pic1.zhimg.com/80/v2-b85a31bbe8ed2b42a3ad11a707720674_720w.jpg&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;图片来自李宏毅老师生成对抗网络视频 https://www.youtube.com/watch?v=DMA4MrNieWo&amp;amp;list=PLJV_el3uVTsMq6JEFPW35BCiOQTsoqwNw&amp;amp;index=5&lt;/p&gt;
+&lt;p&gt;在实际过程中，classifier 和 discriminator 会共享参数，只有最后一层是不一样的，classifier 输出的是一个 vector, discriminator 输出的是一个标量。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;第一章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一章&#34;&gt;#&lt;/a&gt; 第一章：&lt;/h2&gt;
+&lt;p&gt;生成器的优点在于生成很容易，但只学习了真实样本的表象，只学到了 component 和 component 像素和像素之间的相似度，而没有学到图像和图像的关联。可以用生成器取代下面方程，产生负样本，产生 x~&lt;/p&gt;
+&lt;p&gt;以往是通过高斯混合模型定义 PG 然后用最大似然估计算出最优分布 PG 下的参数 sita，但这个模型可能更复杂，不用高斯…… 又难以计算。而现在用生成器找到一个分布，也就是用生成器可以生成一个很复杂的分布 PG。&lt;strong&gt;生成器 G 意图让生成的样本 PG 和真实样本 Pdata 之间的散度越小越好&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/nJGAp4UV1RF1nuDeWqVQ69/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;PG 可以通过生成器的向量中生成，一张张图片，Pdata 可以通过真实数据集采样得到 那么如何通过生成器计算 PG 和 Pdata 的散度呢&lt;/p&gt;
+&lt;p&gt;判别器优点在于能够学到整个图像的关联，但很难生成图像，需要解 x~=arg max D (x）方程&lt;/p&gt;
+&lt;p&gt;1. 如何训练判别器 D 呢，首先固定 G，寻找让 max V (G,D) 的 D,。对每一个 x，都可以找一个不同的 D 让式子最大&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/eXSZqZfenTQMi81R31MB9/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/8kJUGdgeCEpjk6PQNytwaA/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/tLFB6bFnEXT2M3YHgA8mpC/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;第一步：固定 G，寻找 D，让 V 函数 max 第二步：在寻找到的 D 基础上固定不动，寻找让 maxV 最小的 G&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/3EA6zaGNngsbPAzqGY5y1y/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;第四章基础理论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第四章基础理论&#34;&gt;#&lt;/a&gt; 第四章：基础理论&lt;/h1&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/bqo7AayLPxFkVxuCRis5zE/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;首先给定 G，找到 D&lt;em&gt; 并求出 V 对 sitaG 的梯度，用于更新 sitaG 找一个 D&lt;/em&gt; 从而 maxV 的过程就是找到 Pdata 和 PG 之间的 JS 散度 V (G1,D1*) 的过程&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/dV2swuC8a28CS4VfGDaZht/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;关键是：&lt;strong&gt;当更新 G0 后函数 V 可能会变化&lt;/strong&gt;，而此时的 D*（使 V 最大的横坐标位置）可能就变了，再用之前的 D * 训练就不靠谱。因此只能每次更新 G 一点点，假设每次更新后函数变化很小和之前是类似的，因此不太可能出现右图情况。 &lt;strong&gt;因此生成器 G 不能训练太多，通常只更新一次&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/xbN23FioNDynxriujmQFJZ/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;期望 E 计算：实际上只能通过离散叠加求均值的方法来计算 V，实际上是从 Pdata 和 PG 中采样出一堆 x 来代替期望 E，训练一个二分类分类器→最小化交叉熵 = maxV&lt;/p&gt;
+&lt;p&gt;训练判别器的目的是：为了评估 JS 散度 从 Pdata 中采用出一堆 x 作为正样本，从 PG 中采样出一堆 x 作为负样本&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/7AT2kMos9ygmSLMdMvccww/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;每轮训练迭代过程：&lt;/p&gt;
+&lt;p&gt;1. 根据 Pdata（x）中采样 m 个 x，从先验分布中采样 m 个噪声向量 z→输入生成器→得到 m 个生成样本，更新判别器参数 sitad 从而→maxV&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;训练判别器目的&lt;/strong&gt;：为了估计 JS 散度才训练判别器，而用于估计 JS 散度的最优判别器的目标函数 V 是最大的，为了使其最大必定需要多轮重复迭代训练→直到收敛→&lt;strong&gt;可以更新 k 次&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;** 训练生成器目的：** 为了最小化 JS 散度，而由于生成器每次训练会导致目标函数变化，&lt;strong&gt;因此每次只训练更新一次&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/w971ot17oG8iSzZTphWndg/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;fgan框架&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#fgan框架&#34;&gt;#&lt;/a&gt; fGAN 框架&lt;/h2&gt;
+&lt;p&gt;用不同 f - 散度量生成样本和真实样本的差距 p (x) 和 q（x）分别代表从 x 从 p 分布和从 q 分布采样出来的几率 p 和 q 之间的散度：&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;info-ganvae-gan-bigan&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#info-ganvae-gan-bigan&#34;&gt;#&lt;/a&gt; Info GAN,VAE GAN, BiGAN&lt;/h2&gt;
+&lt;p&gt;编码器和解码器输入输出不相连，判别器输入 z 和图像，判断是来自编码器还是解码器&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/o4UXQGEAthzwVS7ZcWaWUi/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/tcLaeqdUR9ZqxFeGgQTbVK/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/12/philosophy/%E7%8E%B0%E8%B1%A1%E5%AD%A6-%E8%83%A1%E5%A1%9E%E5%B0%94/%E7%8E%B0%E8%B1%A1%E5%AD%A6-%E8%83%A1%E5%A1%9E%E5%B0%94/</guid>
+            <title>现象学/胡塞尔</title>
+            <link>https://aristotlednzk.github.io.com/2022/10/12/philosophy/%E7%8E%B0%E8%B1%A1%E5%AD%A6-%E8%83%A1%E5%A1%9E%E5%B0%94/%E7%8E%B0%E8%B1%A1%E5%AD%A6-%E8%83%A1%E5%A1%9E%E5%B0%94/</link>
+            <category term="哲学社科" scheme="https://aristotlednzk.github.io.com/categories/philosophy/" />
+            <category term="西哲" scheme="https://aristotlednzk.github.io.com/categories/philosophy/%E8%A5%BF%E5%93%B2/" />
+            <category term="哲学社科" scheme="https://aristotlednzk.github.io.com/tags/%E5%93%B2%E5%AD%A6%E7%A4%BE%E7%A7%91/" />
+            <pubDate>Wed, 12 Oct 2022 21:29:08 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;现象学胡塞尔&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#现象学胡塞尔&#34;&gt;#&lt;/a&gt; 现象学 —— 胡塞尔&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzdjWFlOenFDSHY2eGdHR3hHcTc0aVI=&#34;&gt;事物的本质及认识&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;胡塞尔的现象学关注的是 “认识如何可能”&lt;strong&gt;（认识的过程）的问题，是对认识本身的批判，这是反对以往的科学仅仅关注 “认识的对象” 而并不关注&lt;/strong&gt;认识本身 ** 提出的。&lt;/p&gt;
+&lt;p&gt;胡塞尔的核心命题就在解释：&lt;strong&gt;认识如何可能，或我们认识是否能与内在事物一致的问题&lt;/strong&gt;（我们能不能清除一切对实存的主观设定，而完全客观地看待事物本身）。&lt;/p&gt;
+&lt;p&gt;在胡塞尔那里，&lt;strong&gt;被给予性&lt;/strong&gt;意味着 ：一个东西 “没有表述其他什么”“没有超越自身去意指什么” 它所展示的东西完全都是自身被给予的东西，胡塞尔认为人的 “思维” 就是这样一种东西，而以往的所有科学研究中，研究者都是带有主观设定和滤镜去看的，因此所有的物在科学研究那里都无法具有 “绝对的被给予性”，都是不可靠的。&lt;/p&gt;
+&lt;p&gt;在胡塞尔那里，“意向性” 作为现象学的 “不可或缺的起点概念和基本概念” 标志着所有意识的本己特性，即：所有意识都是 “关于某物的意识” 并且作为这样一种意识而可以得到直接的指明和描述。关于某物的意识是指在广义上的意指行为与被意指之物本身之间可贯通的相互关系。&lt;/p&gt;
+&lt;p&gt;对 “意向性” 之把握的惟一途径在胡塞尔看来是本质直观的反思：“在意向性被反思揭示并因此而自身成为课题之前，它始终是隐蔽着的”&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/12/%E8%BF%9C%E8%A1%8C%E8%80%85%E5%BC%80%E7%AF%87/%E8%BF%9C%E8%A1%8C%E8%80%85%E5%BC%80%E7%AF%87/</guid>
+            <title>远行者开篇</title>
+            <link>https://aristotlednzk.github.io.com/2022/10/12/%E8%BF%9C%E8%A1%8C%E8%80%85%E5%BC%80%E7%AF%87/%E8%BF%9C%E8%A1%8C%E8%80%85%E5%BC%80%E7%AF%87/</link>
+            <category term="言" scheme="https://aristotlednzk.github.io.com/categories/%E8%A8%80/" />
+            <category term="言" scheme="https://aristotlednzk.github.io.com/tags/%E8%A8%80/" />
+            <pubDate>Wed, 12 Oct 2022 16:52:06 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;初衷&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#初衷&#34;&gt;#&lt;/a&gt; 初衷&lt;/h2&gt;
+&lt;p&gt;抱着将博客作为云笔记软件来用的想法，历时两天才醒悟，还是继续当个牌面吧……&lt;/p&gt;
+&lt;h3 id=&#34;后续&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后续&#34;&gt;#&lt;/a&gt; 后续&lt;/h3&gt;
+&lt;p&gt;Maybe 日后还有别的用途？比如不定期更新个人读书笔记、随想录之类……&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/11/%E9%97%BB%E8%AF%B4/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB/</guid>
+            <title>亲密关系</title>
+            <link>https://aristotlednzk.github.io.com/2022/10/11/%E9%97%BB%E8%AF%B4/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB/</link>
+            <category term="阅读笔记" scheme="https://aristotlednzk.github.io.com/categories/%E9%97%BB%E8%AF%B4/" />
+            <category term="阅读笔记" scheme="https://aristotlednzk.github.io.com/tags/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" />
+            <pubDate>Tue, 11 Oct 2022 19:30:59 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;亲密关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#亲密关系&#34;&gt;#&lt;/a&gt; 亲密关系&lt;/h1&gt;
+&lt;p&gt;练习：写下初遇时在伴侣身上发现的所有优点和相处至今的优点，另一张纸上写现在在对方身上看到的缺点，第一张表上列的每一项得十分，第二章表上列的扣十分&lt;/p&gt;
+&lt;p&gt;1、最初被某人吸引通常是由于情绪上的需求，这些需求来源于孩提时代未被满足的需要。孩童时期的主要需求：寻求归属感 —— 证明自己具有特殊价值 ——“想要变得特别”&lt;br /&gt;
+ 期待一个能无视我们所有缺点并且对自己的需求极大的人。&lt;/p&gt;
+&lt;p&gt;2、制造梦想的机器：从童年时期就开始绘制能满足自己一切期待的理想对象，随着年龄增长，期望越来越高&lt;br /&gt;
+ 3、如果在现实中寻觅不到就开始在相处中对她未满足自己需求的方面进行改造&lt;/p&gt;
+&lt;h2 id=&#34;月晕期&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#月晕期&#34;&gt;#&lt;/a&gt; 月晕期&lt;/h2&gt;
+&lt;h3 id=&#34;通往地狱之路是用期望铺成的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通往地狱之路是用期望铺成的&#34;&gt;#&lt;/a&gt; 通往地狱之路，是用期望铺成的&lt;/h3&gt;
+&lt;p&gt;期待与要求分为明说和暗示，在需求得到满足前我们不愿意去爱。&lt;/p&gt;
+&lt;p&gt;然而我的期望让我不能得到安抚，期望的目的是要让需求得到满足，但与此同时必然会出现两件事：&lt;br /&gt;
+（1）我们内心缺乏爱，如果我们需要 sth，是因为我们没有&lt;br /&gt;
+（2）如果没有 sb 满足我们的需求，我们会觉得世界上没有足够的爱 —— 希望从他人身上得到爱只会让 “无人爱我” 的想法更牢不可破&lt;/p&gt;
+&lt;p&gt;因此期望是愤恨的前兆&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;       在对亲密关系不满意时问问自己，此时希望从伴侣身上得到的是什么？本质上是情绪上的事物，表面上看来则是实质的需求。&lt;/p&gt;
+&lt;p&gt;例：约好七点见面，但她八点才来，我不高兴但&lt;strong&gt;真正原因不是她迟到而是她让我觉得自己不够特别&lt;/strong&gt; —— 我希望她让我觉得自己很重要，重要到她应该愿意为了我而守时&lt;/p&gt;
+&lt;p&gt;了解自己期望背后的需求，我们通常只是希望伴侣做或说一些事，但却不会意识到我们希望他们这么做其实是满足自己某些情绪上的需求 —— 我们希望曲儿我们值得被爱&lt;/p&gt;
+&lt;p&gt;想象力、意向和直觉&lt;/p&gt;
+&lt;p&gt;灵魂思考的方式 —— 直觉&lt;/p&gt;
+&lt;p&gt;当找到自己真正的情绪需求后再问自己：我愿不愿意放弃这项期望呢 —— 我愿不愿意寻求自己内在的力量来满足我的所有需求呢？&lt;/p&gt;
+&lt;p&gt;如果答案是肯定的，那么&lt;strong&gt;直觉会告诉你该如何放手了&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你有精神上的信仰，那么不妨把需求交给内心中高层次的力量&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id=&#34;如果决定放手那么如何满足需求呢事实是我们并不需要自己认为需要的东西&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如果决定放手那么如何满足需求呢事实是我们并不需要自己认为需要的东西&#34;&gt;#&lt;/a&gt; 如果决定放手，那么如何满足需求呢？
+—— 事实是，我们并不需要自己认为需要的东西&lt;/h3&gt;
+&lt;p&gt;学会放手和接纳，明白自己原本就是一个完整的个体，所需的一切都存在于你的内心&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;幻灭期&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#幻灭期&#34;&gt;#&lt;/a&gt; 幻灭期&lt;/h2&gt;
+&lt;p&gt;随着愤恨的到来，标志着进入第二阶段 —— 幻灭&lt;/p&gt;
+&lt;p&gt;幻灭带来偏差行为：&lt;br /&gt;
+引起注意、权力斗争：满足孩子的两大需求&lt;br /&gt;
+报复心理、自我放逐：当孩子觉得需求永远不会被满足时被深刻的沮丧痛苦驱使做出毁灭性行为&lt;/p&gt;
+&lt;p&gt;       远离造成痛苦的人并不会让痛苦消失，伴侣只是让我发觉到痛苦的存在。唤醒过去的伤痛，想要疗伤的企图往往导致亲密关系危机，和伴侣吵架只是为了不去感受旧痛，而伴侣所做的仅仅是让旧痛浮上意识表层。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;信念想法的果实&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信念想法的果实&#34;&gt;#&lt;/a&gt; 信念：想法的果实&lt;/h2&gt;
+&lt;p&gt;种下想法，就得到行动。种下行动，就得到习惯。&lt;br /&gt;
+种下习惯，就得到人格。种下人格，就得到命运。&lt;/p&gt;
+&lt;p&gt;过去的创伤并不会随时间逝去，每个自我局限的信念都来自过去的创伤、痛苦的经验。所有未愈合伤口的信念都是自我局限的，&lt;/p&gt;
+&lt;p&gt;——&lt;strong&gt; 如果离开家的时候，你并不感到平静，那么你其实并没有离开&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;亲密关系中蕴含着治好旧伤的机会。而大多数情况是双方都试图控制对方的行为，借以控制过去的创伤。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cluoma%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221011193226891.png&#34; alt=&#34;image-20221011193226891&#34; /&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/11/philosophy/%E7%8E%8B%E9%98%B3%E6%98%8E%E5%BF%83%E5%AD%A6/</guid>
+            <title>王阳明心学</title>
+            <link>https://aristotlednzk.github.io.com/2022/10/11/philosophy/%E7%8E%8B%E9%98%B3%E6%98%8E%E5%BF%83%E5%AD%A6/</link>
+            <category term="哲学社科" scheme="https://aristotlednzk.github.io.com/categories/philosophy/" />
+            <category term="中哲" scheme="https://aristotlednzk.github.io.com/categories/philosophy/%E4%B8%AD%E5%93%B2/" />
+            <category term="哲学社科" scheme="https://aristotlednzk.github.io.com/tags/%E5%93%B2%E5%AD%A6%E7%A4%BE%E7%A7%91/" />
+            <pubDate>Tue, 11 Oct 2022 19:29:15 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;王阳明心学&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#王阳明心学&#34;&gt;#&lt;/a&gt; 王阳明心学&lt;/h1&gt;
+&lt;p&gt;一、人具有无限心&lt;/p&gt;
+&lt;p&gt;       人作为时间性存在，总是以筹划尚不存在的未来的形式活在当下 —— 证明了人心的无限性 —— 能超越现实；因而烦恼从中来。&lt;br /&gt;
+关键在于安顿无限心。在官场上，中国政治的传统模式一天不变，中南海和秦城监狱之间就一步之遥。高官俸禄之有限，&lt;strong&gt;而无限心无法安顿在有限的事物上，因为现实世界的事物无一不是有限的。因此无限心只能安顿在超越现实的世界中（出世 —— 从现实世界的利害中超拔出来），而无法安顿在现实世界中&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;儒家：无所为而为。如果从未出世，那么做事总是有所为而为，做事都有目标目的，始终把自己做的事情看作是达到另外一个目的手段。&lt;br /&gt;
+无所为而为 —— 这件事本应当做，它就是自己的价值 &lt;/p&gt;
+&lt;p&gt;道家：无为而无不为。不以人为的方式做事。人 + 为 = 伪 = 造作，生非贵之所能存，身非爱之所能厚，遇矛盾先将属于自己的&lt;strong&gt;人为因素去除&lt;/strong&gt;，在最终还是不得不去处理时再去做，时机恰到好处，方法顺应天道。最好的人生就是没有目标的人生。&lt;/p&gt;
+&lt;p&gt;佛家：无心而为。每个人做什么自有来历 —— 业力。&lt;strong&gt;做事就是消业，不求结果，最好没有结果，若有结果则旧业未消又增新业。但凡事都有结果，力求结果与己无关。&lt;/strong&gt; 认真做事，但对结果漠不关心 ——&lt;strong&gt; 除心不除事&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;业力：每个人都生来带着业力&lt;/p&gt;
+&lt;p&gt;人并非拥有选择自己拥有某种愿望的能力，只是拥有选择实现愿望的道路的能力，什么愿望来到我们心里并不是我们的自由，愿望就这么来了……&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;插入：西方哲学 —— 自身问题：关于世界的客观知识的前提基础是什么，获得客观可靠有效知识的方法是什么；中国哲学 —— 人生问题；佛学中国化（两汉之际）禅宗，两宋时期儒道佛合流 —— 王阳明心学&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;一体之仁，当我们对鸟兽虫鱼的哀鸣生出恻隐之心，当我们与鸟兽虫鱼连为一体，人心感通宇宙万物，中国宇宙观。心之理 —— 不是心外之理，真理不要到心外去寻求 —— 万物皆备于我，反身而成，乐莫大焉。上乘孟子 “学问之道无他，求其放心而已”，学问 —— 已经被亡失的心重新召回。&lt;/p&gt;
+&lt;p&gt;佛学中国化：禅宗 16 字法门：教外别传，不立文字，直指人心，见性成佛&lt;br /&gt;
+不求出离生死之苦海，自性若迷。不睹众相常观金体。六色 —— 眼耳鼻舌身意 —— 着项；观金体本身 —— 不住相。佛法在世间，不离世间觉。离世觅菩提，恰如求兔角&lt;/p&gt;
+&lt;p&gt;《金刚经》核心思想 ——&lt;strong&gt; 因无所住而生其心&lt;/strong&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/11/computer-science/%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF/</guid>
+            <title>转码之路</title>
+            <link>https://aristotlednzk.github.io.com/2022/10/11/computer-science/%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF/</link>
+            <category term="转码之路" scheme="https://aristotlednzk.github.io.com/categories/computer-science/" />
+            <category term="转码之路" scheme="https://aristotlednzk.github.io.com/tags/%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF/" />
+            <pubDate>Tue, 11 Oct 2022 19:26:24 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;转码之路&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#转码之路&#34;&gt;#&lt;/a&gt; 转码之路&lt;/h1&gt;
+&lt;p&gt;鱼皮学习路线&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRlZS5jb20vbGl5dXBpL2NvZGUtcm9hZG1hcC9ibG9iL21haW4vZG9jcy9yb2FkbWFwL0phdmElRTUlQUQlQTYlRTQlQjklQTAlRTglQjclQUYlRTclQkElQkYubWQjaHR0cHM6Ly9naXRlZS5jb20vbGluaz90YXJnZXQ9aHR0cHM6Ly93d3cubm93Y29kZXIuY29tL2ludGVsbGlnZW50VGVzdA==&#34;&gt; https://gitee.com/liyupi/code-roadmap/blob/main/docs/roadmap/Java 学习路线.md#https://gitee.com/link?target=https%3A%2F%2Fwww.nowcoder.com%2FintelligentTest&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;API 在线文档&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b29sLm9zY2hpbmEubmV0L2FwaWRvY3MvYXBpZG9jP2FwaT1qZGtfN3U0&#34;&gt; https://tool.oschina.net/apidocs/apidoc?api=jdk_7u4&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzN4QjlGQkZMVmhkMWk2dWNmZ3NIR0I=&#34;&gt;面经资料&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzJMTGpnZGdjM25pZ1l4WnFSakhRRUU=&#34;&gt;岗位分析&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL3dkakU3WEdRNzhmTURUZnFTTXpTU0M=&#34;&gt;简历&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2NhelNUZm1iTkgxTjE0OThUM1dmUUc=&#34;&gt;后端指导大纲&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzJQOUVTVFRxdUhpOUhtdTFVQVpVVlI=&#34;&gt;GIT&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2dvSzl5Rnlud29lOWlQdU43aWVETlU=&#34;&gt;Linux&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL3I0NGFVUWlkUkVtUEFxTU14QWhHdUY=&#34;&gt;C++&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzRHRlhoMW95N2pyblhMMW1vclhyN28=&#34;&gt;力扣刷题笔记&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2plYmJYOG9uZG1VRUtqaWlRd01rOTY=&#34;&gt;JAVA 基础笔记&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzRzYkt1TmtRc0NyVkY5Z0tESkMyaFg=&#34;&gt;MySQL（DB）&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2VXZ0F6OTdEaTdjZHZpcThtU1o3cXM=&#34;&gt;JVM&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2oyeVF6QVlHSjk2SHlWa3JHZ25GTFY=&#34;&gt;JUC 并发编程&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2UyUzNHZjZ4VkJtS3p3VVk3N2tqUnc=&#34;&gt;三件套&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL3FMRHRaMXlBOUZhV3g4dkQxcVlBN1c=&#34;&gt;排序算法&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzlFaFl6RnF5V1hZY0Ryc2VtdjhidTE=&#34;&gt;Spring 框架&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzYyWlI1bTJBVER6OFoyUXdTN21rTTE=&#34;&gt;Redis&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzlDWUFFell4RXY3bzdoUnoxWHN3Q0E=&#34;&gt;Docker&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2p5VkdDdGZSYzRDeTFmaVlVWW1CdUI=&#34;&gt;Acwing 算法基础课&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;D:%5CWolai%5C%E7%AC%94%E8%AE%B0%5C%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF%5Cimage%5Cimage_v6vkTMI4J5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;java学习路线一&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java学习路线一&#34;&gt;#&lt;/a&gt; Java 学习路线一&lt;/h2&gt;
+&lt;p&gt;牛客链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubm93Y29kZXIuY29tL2Rpc2N1c3MvNDY0NzUwP3R5cGU9cG9zdCZhbXA7b3JkZXI9cmVjYWxsJmFtcDtwb3M9JmFtcDtwYWdlPTEmYW1wO25jVHJhY2VJZD0mYW1wO2NoYW5uZWw9LTEmYW1wO3NvdXJjZV9pZD1zZWFyY2hfcG9zdF9uY3RyYWNrJmFtcDtnaW9faWQ9QjcyMkIxMkMyODNEN0MwRDAxQzFCRDUxNTY5QTU2OTYtMTY1Nzg3Mzk3MDUwNA==&#34;&gt;https://www.nowcoder.com/discuss/464750?type=post&amp;amp;order=recall&amp;amp;pos=&amp;amp;page=1&amp;amp;ncTraceId=&amp;amp;channel=-1&amp;amp;source_id=search_post_nctrack&amp;amp;gio_id=B722B12C283D7C0D01C1BD51569A5696-1657873970504&lt;/span&gt;  &lt;/p&gt;
+&lt;p&gt;1 JVM&lt;/p&gt;
+&lt;p&gt;内存模型、垃圾收集&lt;a href=&#34;/jump/super-jump/word?word=%E7%AE%97%E6%B3%95&#34; title=&#34;算法&#34;&gt;算法&lt;/a&gt;与垃圾收集器、内存溢出与内存泄漏是重点，JVM 调优也学一下；&lt;/p&gt;
+&lt;p&gt;2 spring&lt;/p&gt;
+&lt;p&gt;3 springmvc&lt;/p&gt;
+&lt;p&gt;4 mybatis&lt;/p&gt;
+&lt;p&gt;5 springboot&lt;/p&gt;
+&lt;p&gt;框架不但要会用，也要能清晰原理比如自动配置的原理；&lt;/p&gt;
+&lt;p&gt;6 多线程 同步 并发等（这很重要）&lt;/p&gt;
+&lt;p&gt;生产者消费者模式代码、synchronized、lock、各种锁机制和锁升级；&lt;/p&gt;
+&lt;p&gt;7 一些常见的数据结构与&lt;a href=&#34;/jump/super-jump/word?word=%E7%AE%97%E6%B3%95&#34; title=&#34;算法&#34;&gt;算法&lt;/a&gt;的底层 比如 Hash 、ConcurrentHashMap、LinkedHashMap、LRU (LRU 要会自己敲底层实现，其实跟 LinkedHashMap 差不多)；&lt;/p&gt;
+&lt;p&gt;8 设计模式&lt;/p&gt;
+&lt;p&gt;关于设计模式我并没有单独拎出来学习，而是在学框架的时候用到了什么就补充了一下。&lt;/p&gt;
+&lt;p&gt;比如学到 bean 的作用范围的时候补充学习了一下单例模式；&lt;/p&gt;
+&lt;p&gt;学 IOC 的时候补充学习了一下工厂模式；&lt;/p&gt;
+&lt;p&gt;学 AOP 的时候补充学习了代理模式；&lt;/p&gt;
+&lt;p&gt;学习 Redistemplate 的时候补充学习了模板模式；&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;强化阶段：（强化阶段学的还不太好，会在毕业前进行再强化）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1 &lt;a href=&#34;/jump/super-jump/word?word=redis&#34; title=&#34;redis&#34;&gt;redis&lt;/a&gt;（很重要，务必要熟练掌握，好像每次面试都被问到了）&lt;/p&gt;
+&lt;p&gt;热 key 和大 key 问题、击穿、穿透、雪崩、数据类型底层、RDB&amp;amp;AOF、实现消息中间件（发布者订阅者模式）、过期与淘汰策略。&lt;/p&gt;
+&lt;p&gt;2 分布式（主要学的分布式锁 分布式事务）&lt;/p&gt;
+&lt;p&gt;3 微服务&lt;/p&gt;
+&lt;p&gt;4 消息中间件（我努力加强）&lt;/p&gt;
+&lt;h2 id=&#34;学习路线3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#学习路线3&#34;&gt;#&lt;/a&gt; 学习路线 3&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vY2FvbGVpQ29kaW5nL3AvNjE3MDU1NS5odG1s&#34;&gt;https://www.cnblogs.com/caoleiCoding/p/6170555.html&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;经验&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#经验&#34;&gt;#&lt;/a&gt; 经验&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/v123411739/article/details/115498947?ops_request_misc=%7B%22request%5Fid%22%3A%22165910547516782388038827%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fall.%22%7D&amp;amp;request_id=165910547516782388038827&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-4-115498947-null-null.142%5Ev35%5Eexperiment_2_v1&amp;amp;utm_term=%E5%B0%9A%E7%A1%85%E8%B0%B7MySQL&amp;amp;spm=1018.2226.3001.4187&#34; title=&#34;https://blog.csdn.net/v123411739/article/details/115498947?ops_request_misc=%7B%22request%5Fid%22%3A%22165910547516782388038827%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fall.%22%7D&amp;amp;request_id=165910547516782388038827&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-4-115498947-null-null.142^v35^experiment_2_v1&amp;amp;utm_term=尚硅谷MySQL&amp;amp;spm=1018.2226.3001.4187&#34;&gt;https://blog.csdn.net/v123411739/article/details/115498947?ops_request_misc=%7B%22request%5Fid%22%3A%22165910547516782388038827%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fall.%22%7D&amp;amp;request_id=165910547516782388038827&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-4-115498947-null-null.142&lt;sup&gt;v35&lt;/sup&gt;experiment_2_v1&amp;amp;utm_term = 尚硅谷 MySQL&amp;amp;spm=1018.2226.3001.4187&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;D:%5CWolai%5C%E7%AC%94%E8%AE%B0%5C%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF%5Cimage%5Cimage_A80nTpU_Sw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2NIeEJMSENtS253ZFJSM0J0MTFWNFU=&#34;&gt;IDEA 架构&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL3FNeFRSVDdIYmQ3NndzNUxXQlhYYzU=&#34;&gt;配置环境&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL3hnRjVVclpTNzdFRHJMcGhrQWFMMlE=&#34;&gt;设计模式&lt;/span&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;神的博客笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#神的博客笔记&#34;&gt;#&lt;/a&gt; 神的博客笔记：&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sdnh1ZXlhbmcudmlwL3RhZ3MvSnVjLw==&#34;&gt;https://lvxueyang.vip/tags/Juc/&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVxdWUuY29tL2Z1eXVzYWthaW9yaS95YmMyZzg/dGhlbWU9bGlnaHQ=&#34;&gt;https://www.yuque.com/fuyusakaiori/ybc2g8?theme=light&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzU0N2JKYzNwallzWmlDR21pcG5GOGE=&#34;&gt;英文储备&lt;/span&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/09/hello-world/</guid>
             <title>Hello World</title>
@@ -31,6 +290,216 @@
 &lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
 &lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2020/04/12/week-1/</guid>
+            <title>第1周 计算</title>
+            <link>https://aristotlednzk.github.io.com/2020/04/12/week-1/</link>
+            <category term="计算机科学" scheme="https://aristotlednzk.github.io.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" />
+            <category term="Java" scheme="https://aristotlednzk.github.io.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/java/" />
+            <category term="零基础学Java语言-浙江大学-翁恺" scheme="https://aristotlednzk.github.io.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/java/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6Java%E8%AF%AD%E8%A8%80-%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6-%E7%BF%81%E6%81%BA/" />
+            <pubDate>Sun, 12 Apr 2020 20:46:25 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;:::note info&lt;br /&gt;
+ 以下为个人学习笔记和习题整理&lt;br /&gt;
+课程：零基础学 Java 语言 - 浙江大学 - 翁恺 @ 中国大学 MOOC&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuaWNvdXJzZTE2My5vcmcvY291cnNlL1pKVS0xMDAxNTQxMDAx&#34;&gt;https://www.icourse163.org/course/ZJU-1001541001&lt;/span&gt;&lt;br /&gt;
+:::&lt;/p&gt;
+&lt;h1 id=&#34;课堂笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#课堂笔记&#34;&gt;#&lt;/a&gt; 课堂笔记&lt;/h1&gt;
+&lt;h2 id=&#34;读输入-字符串输出&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#读输入-字符串输出&#34;&gt;#&lt;/a&gt; 读输入、字符串输出&lt;/h2&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption&gt;&lt;span&gt;scanner&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; java.util.Scanner;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Scanner&lt;/span&gt;(System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 输入Scan之后，按下键盘 Alt + “/” 键，Eclipse下自动补全。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println(in.nextLine());&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 让in这个对象做读入下一行的动作，结果交给System.out这个对象去打印一行。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 字符串的 + 用来连接两个字符串形成更长的字符串。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println(&lt;span class=&#34;string&#34;&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt; + &lt;span class=&#34;string&#34;&gt;&amp;quot; world.&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println(&lt;span class=&#34;string&#34;&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt; + &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println(&lt;span class=&#34;string&#34;&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt; + &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; + &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;System.out.println(&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt; + &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt; + &lt;span class=&#34;string&#34;&gt;&amp;quot;Hello&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;tips：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;System.out.println&lt;/code&gt;  会换行， &lt;code&gt;System.out.print&lt;/code&gt;  则不会换行&lt;/li&gt;
+&lt;li&gt;出现警告： &lt;code&gt;Resource leak: &#39;in&#39; is never closed&lt;/code&gt; ，可以在函数的最后加入&lt;br /&gt;
+ &lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;in.close();&lt;span class=&#34;comment&#34;&gt;//释放&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;变量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#变量&#34;&gt;#&lt;/a&gt; 变量&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;形式&lt;/strong&gt;：&amp;lt;类型名称&amp;gt; &amp;lt; 变量名称 &amp;gt; = &amp;lt; 初始值 &amp;gt;&lt;br /&gt;
+ &lt;code&gt;int price, amount; // 同时定义两个变量&lt;/code&gt; &lt;br /&gt;
+ &lt;code&gt;int price = 0; // 定义变量并赋值&lt;/code&gt; &lt;br /&gt;
+ &lt;code&gt;int price, amount = 100, age;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;类型名称&lt;/strong&gt;：Java 是一种&lt;strong&gt;强类型语言&lt;/strong&gt;，所有变量在使用前必须定义或声明，所有变量必须具有确定的数据类型。数据类型表示在变量中可以存放什么样的数据，程序运行过程中也不能改变变量的类型。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;变量名称&lt;/strong&gt;：又称标识符，只能由字母、数字、下划线构成，数字不能出现在第一个位置。此外，Java 的保留字也不能用作标识符。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Java 的保留字列表&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;abstract&lt;/th&gt;
+&lt;th&gt;do&lt;/th&gt;
+&lt;th&gt;implements&lt;/th&gt;
+&lt;th&gt;protected&lt;/th&gt;
+&lt;th&gt;throws&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;double&lt;/td&gt;
+&lt;td&gt;import&lt;/td&gt;
+&lt;td&gt;public&lt;/td&gt;
+&lt;td&gt;transient&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;break&lt;/td&gt;
+&lt;td&gt;else&lt;/td&gt;
+&lt;td&gt;instanceof&lt;/td&gt;
+&lt;td&gt;return&lt;/td&gt;
+&lt;td&gt;true&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;byte&lt;/td&gt;
+&lt;td&gt;extends&lt;/td&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;td&gt;short&lt;/td&gt;
+&lt;td&gt;try&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;case&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;td&gt;interface&lt;/td&gt;
+&lt;td&gt;static&lt;/td&gt;
+&lt;td&gt;while&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;catch&lt;/td&gt;
+&lt;td&gt;final&lt;/td&gt;
+&lt;td&gt;long&lt;/td&gt;
+&lt;td&gt;strictfp&lt;/td&gt;
+&lt;td&gt;void&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;char&lt;/td&gt;
+&lt;td&gt;finally&lt;/td&gt;
+&lt;td&gt;native&lt;/td&gt;
+&lt;td&gt;super&lt;/td&gt;
+&lt;td&gt;volatile&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;class&lt;/td&gt;
+&lt;td&gt;float&lt;/td&gt;
+&lt;td&gt;new&lt;/td&gt;
+&lt;td&gt;switch&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;const*&lt;/td&gt;
+&lt;td&gt;for&lt;/td&gt;
+&lt;td&gt;null&lt;/td&gt;
+&lt;td&gt;synchronized&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;continue&lt;/td&gt;
+&lt;td&gt;goto*&lt;/td&gt;
+&lt;td&gt;package&lt;/td&gt;
+&lt;td&gt;this&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;default&lt;/td&gt;
+&lt;td&gt;if&lt;/td&gt;
+&lt;td&gt;private&lt;/td&gt;
+&lt;td&gt;throw&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;以下哪些标识符是符合规则的？&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_0&#34;&gt; currency&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_1&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_1&#34;&gt; lastName&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_2&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_2&#34;&gt; fireplace&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_3&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_3&#34;&gt; _last_name&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_4&#34; checked=&#34;true&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_4&#34;&gt; xingmin&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_5&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_5&#34;&gt; class&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_6&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_6&#34;&gt; goto&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_7&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_7&#34;&gt; 4ever&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_8&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_8&#34;&gt; time-machine&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_9&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_9&#34;&gt; Int&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_10&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_10&#34;&gt; $12&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_11&#34; disabled=&#34;true&#34; /&gt;&lt;label for=&#34;cbx_11&#34;&gt; 我是变量&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;常量-final&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常量-final&#34;&gt;#&lt;/a&gt; 常量 final&lt;/h2&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;AMOUNT&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// final是一个修饰符，表示这个变量的值一旦初始化，就不能再修改了。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;变量类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#变量类型&#34;&gt;#&lt;/a&gt; 变量类型&lt;/h2&gt;
+&lt;h3 id=&#34;整数-int&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#整数-int&#34;&gt;#&lt;/a&gt; 整数 int&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;price&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; in.nextInt();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果用户输入的不是整数，则会报错  &lt;code&gt;java.util.InputMismatchException&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;程序要求读入多个数字时，可以在一行输入，中间用空格分开，也可以多行输入。&lt;/li&gt;
+&lt;li&gt;每次召唤 &lt;code&gt;in.nextInt()&lt;/code&gt; ，它就等待用户输入一个整数。&lt;/li&gt;
+&lt;li&gt;两个整数的运算结果只能是整数。&lt;/li&gt;
+&lt;li&gt;在 Java 中， &lt;code&gt;10&lt;/code&gt;  和 &lt;code&gt;10.0&lt;/code&gt;  是完全不同的数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;浮点数-double&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#浮点数-double&#34;&gt;#&lt;/a&gt; 浮点数 double&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;浮点数运算有误差&lt;/strong&gt;：由于二进制的自身限制，浮点计算需要将十进制先转换为二进制，然后对二进制数进行计算，因此导致误差。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;System.out.println(&lt;span class=&#34;number&#34;&gt;1.2&lt;/span&gt;-&lt;span class=&#34;number&#34;&gt;1.1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 结果为 0.09999999999999987&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;整数类型不能表达有小数部分的数；整数运算速度快，占内存小；日常中整数运算多。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;赋值运算&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#赋值运算&#34;&gt;#&lt;/a&gt; 赋值运算&lt;/h2&gt;
+&lt;h3 id=&#34;强制类型转换&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#强制类型转换&#34;&gt;#&lt;/a&gt; 强制类型转换&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;浮点数和整数放在一起运算时，Java 会将整数转换成浮点数，然后进行浮点数运算。&lt;/li&gt;
+&lt;li&gt;强制性转换的优先级高于四则运算。&lt;br /&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;1.0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;2.0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; (&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt;)a/b; &lt;span class=&#34;comment&#34;&gt;//会报错&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; (&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt;)(a/b); &lt;span class=&#34;comment&#34;&gt;//不会报错&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;运算符优先级&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#运算符优先级&#34;&gt;#&lt;/a&gt; 运算符优先级&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;单目运算符 &lt;code&gt;+&lt;/code&gt;   &lt;code&gt;-&lt;/code&gt;  优先级最高&lt;/li&gt;
+&lt;li&gt;结合关系一般自左向右，单目 &lt;code&gt;+&lt;/code&gt;   &lt;code&gt;-&lt;/code&gt;  和赋值 &lt;code&gt;=&lt;/code&gt;  自右向左。&lt;br /&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;result = a = b = &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt; + c;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;result = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;result = (result = result * &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;) * &lt;span class=&#34;number&#34;&gt;6&lt;/span&gt; * (result = &lt;span class=&#34;number&#34;&gt;3&lt;/span&gt; + result);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;复合赋值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#复合赋值&#34;&gt;#&lt;/a&gt; 复合赋值&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;5 个算术运算符， &lt;code&gt;+ - * / %&lt;/code&gt; ，可以和赋值运算符  &lt;code&gt;=&lt;/code&gt;  结合起来，形成复合赋值运算。注意，两个运算符中间不要有空格。&lt;br /&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;total += (sum+&lt;span class=&#34;number&#34;&gt;100&lt;/span&gt;)/&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;total = total + (sum+&lt;span class=&#34;number&#34;&gt;100&lt;/span&gt;)/&lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;total * = sum+&lt;span class=&#34;number&#34;&gt;12&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;total = total*(sum+&lt;span class=&#34;number&#34;&gt;12&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;total /= &lt;span class=&#34;number&#34;&gt;12&lt;/span&gt;+&lt;span class=&#34;number&#34;&gt;6&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;total = total / (&lt;span class=&#34;number&#34;&gt;12&lt;/span&gt;+&lt;span class=&#34;number&#34;&gt;6&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;递增递减运算符  &lt;code&gt;++&lt;/code&gt;   &lt;code&gt;--&lt;/code&gt; ，给变量 + 1 或 - 1&lt;/li&gt;
+&lt;li&gt;前缀后缀：&lt;br /&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;a = &lt;span class=&#34;number&#34;&gt;14&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;t1 = a++; &lt;span class=&#34;comment&#34;&gt;// t1先被赋值为 a 即14， a自加到 15&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;t2 = ++a; &lt;span class=&#34;comment&#34;&gt;// a先自加到 15，t2被赋值为 a 即 15&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;编程题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编程题&#34;&gt;#&lt;/a&gt; 编程题&lt;/h1&gt;
+&lt;h2 id=&#34;题目1-温度转换5分&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目1-温度转换5分&#34;&gt;#&lt;/a&gt; 题目 1. 温度转换（5 分）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;题目内容&lt;/strong&gt;&lt;br /&gt;
+写一个将华氏温度转换成摄氏温度的程序，转换的公式是：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;°F = (9/5)*°C + 32&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中 C 表示摄氏温度，F 表示华氏温度。&lt;/p&gt;
+&lt;p&gt;程序的输入是一个整数，表示华氏温度。输出对应的摄氏温度，也是一个整数。&lt;/p&gt;
+&lt;p&gt;提示，为了把计算结果的浮点数转换成整数，需要使用下面的表达式：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(int)x;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中 x 是要转换的那个浮点数。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;注意：除了题目要求的输出，不能输出任何其他内容，比如输入时的提示，输出时的说明等等都不能。这道题目要求转换后的数字，程序就只能输出这个数字，除此之外任何内容都不能输出。&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;输入格式&lt;/strong&gt;&lt;br /&gt;
+一个整数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;输出格式&lt;/strong&gt;&lt;br /&gt;
+一个整数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;输入样例&lt;/strong&gt;&lt;br /&gt;
+ 100&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;输出样例&lt;/strong&gt;&lt;br /&gt;
+ 37&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;解题代码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解题代码&#34;&gt;#&lt;/a&gt; 解题代码&lt;/h3&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; java.util.Scanner;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Main&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(String[] args)&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;type&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Scanner&lt;/span&gt;(System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;comment&#34;&gt;// 获得输入的整数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;fahrenheit&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; in.nextInt();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;comment&#34;&gt;// 计算摄氏度&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;type&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;centigrade&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; (fahrenheit - &lt;span class=&#34;number&#34;&gt;32&lt;/span&gt;) / (&lt;span class=&#34;number&#34;&gt;9&lt;/span&gt; / &lt;span class=&#34;number&#34;&gt;5.0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;comment&#34;&gt;// 将浮点数转换为整数输出&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		System.out.println((&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt;)centigrade);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
