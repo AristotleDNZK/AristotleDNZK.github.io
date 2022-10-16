@@ -34,7 +34,7 @@
 &lt;li&gt;大端字节序：一个整数的高位字节存储在内存的低位地址，低位字节（0-7bit）存储在内存高位地址， 称为&lt;strong&gt;网络字节序&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;小端字节序相反→现代多采用：称为&lt;strong&gt;主机字节序&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/dfP7RxWzf4y8aiBahHyH12/image.png?auth_key=1665821550-r2ncZ9o5HWzyARryEBihkY-0-d3c16fb5bda480256b83e95c0f0841a8&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/dfP7RxWzf4y8aiBahHyH12/image.png?auth_key=1665821550-r2ncZ9o5HWzyARryEBihkY-0-d3c16fb5bda480256b83e95c0f0841a8&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;创建socket可读写控制关闭的文件描述符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#创建socket可读写控制关闭的文件描述符&#34;&gt;#&lt;/a&gt; 创建 socket：可读写控制关闭的文件描述符&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;int socket( int domain,int type,int protocol)&lt;/p&gt;
@@ -60,7 +60,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;EACCES: 被绑定的地址是受保护的地址 EADDRINUSE: 被绑定的地址正在使用中&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;上述两个函数都需要: include &amp;lt;sys/types.h&amp;gt; include&amp;lt;sys/socket.h&amp;gt;&lt;/p&gt;
 &lt;h3 id=&#34;监听socket&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#监听socket&#34;&gt;#&lt;/a&gt; 监听 socket&lt;/h3&gt;
 &lt;p&gt;socket 被命名后需要使用系统调用创建一个监听队列来存放待处理的客户连接：&lt;/p&gt;
@@ -90,9 +90,9 @@
             <category term="GAN课题" scheme="https://aristotlednzk.github.io.com/tags/GAN%E8%AF%BE%E9%A2%98/" />
             <pubDate>Fri, 14 Oct 2022 16:29:02 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;1-眼在手上的手眼标定&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1-眼在手上的手眼标定&#34;&gt;#&lt;/a&gt; 1、眼在手上的手眼标定&lt;/h2&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://img-blog.csdnimg.cn/dc166d3e745d411b8deff1c07d6bca08.png&#34; alt=&#34;眼在手上的手眼标定&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://img-blog.csdnimg.cn/dc166d3e745d411b8deff1c07d6bca08.png&#34; alt=&#34;眼在手上的手眼标定&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;基础坐标系（用 base 表示） 是机器臂的基底坐标系，末端坐标系（用 end 表示） 是机器臂的末端坐标系， 相机坐标系（用 cam 表示） 是固定在机器臂上面的相机自身坐标系，标定物坐标系（用 cal 表示）是标定板所在的坐标系。任意移动两次机器臂，由于标定板和机器臂的基底是不动的，因此对于某个世界点，其在 base 坐标系和 cal 坐标系下的坐标值不变，在 end 坐标系和 cam 坐标系下的坐标值随着机器臂的运动而改变。根据这一关系，可以求解出 end 坐标系和 cam 坐标系之间的转换矩阵。&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
  ]]></description>
         </item>
         <item>
@@ -108,52 +108,52 @@
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zNzg1MjEzODM=&#34;&gt;https://zhuanlan.zhihu.com/p/378521383&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;GAN 架构包含两个子模式，分别称为&lt;strong&gt; Generator (G) 和&lt;/strong&gt; Discriminator (D) ，它们相互竞争，目的是通过训练过程达到 Nash 平衡。 生成器学习将潜在空间 (例如，噪声〜N &lt;em&gt;(0,1)&lt;/em&gt; ) 映射到在其上分发给定数据样本的数据空间，鉴别器评估生成器完成的映射。 生成器的主要作用是生成模仿训练数据集的合成数据，以使鉴别器无法将合成数据与真实数据区分开。&lt;/p&gt;
 &lt;p&gt;生成器的输入是随机噪声矢量_x&#39;_ (通常是均匀或正态分布)。 噪声向量通过 Generator 映射到新的数据空间，以获得伪样本_G (x&#39;)_ ，它是多维向量。 鉴别器是一个二进制分类器，它吸收了生成的数据集和训练的数据集，并学习将它们分类为假的和真实的。** 当判别器无法确定数据来自真实数据集还是生成器时，便会达到 GAN 模型的最佳状态 **&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/pSoih4oE9yFozGUVuiqZwi/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/pSoih4oE9yFozGUVuiqZwi/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h2 id=&#34;可解释的生成对抗网络infogan&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可解释的生成对抗网络infogan&#34;&gt;#&lt;/a&gt; 可解释的生成对抗网络：InfoGAN&lt;/h2&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC81NTk0NTE2NA==&#34;&gt;https://zhuanlan.zhihu.com/p/55945164&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC81NDA5NjM4MQ==&#34;&gt;生成对抗网络 (GAN) 背后的数学理论&lt;/span&gt; 提到，generator 和 discriminator 的对抗学习，它的目标其实是得到一个与 real data 分布一致的 fake data 分布。&lt;/p&gt;
 &lt;p&gt;但是由于 generator 的输入是一个&lt;strong&gt;连续的噪声信号&lt;/strong&gt;，并且&lt;strong&gt;没有任何约束&lt;/strong&gt;，导致 GAN 将 z 的具体维度与 output 的语义特征对应起来，可解释性很差。&lt;/p&gt;
 &lt;p&gt;它的原理很简单，在 info GAN 里面，把输入向量 z 分成两部分，c 和 z&#39;。c 可以理解为可解释的隐变量，而 z 可以理解为不可压缩的噪声。希望通过约束 c 与 output 的关系，&lt;strong&gt;使得隐变量 c 的维度对应 output 的语义特征&lt;/strong&gt;，以手写数字为例，比如笔画粗细，倾斜度等。&lt;/p&gt;
 &lt;p&gt;为了引入 c，作者&lt;strong&gt;通过互信息的方式来对 c 进行约束&lt;/strong&gt;，也可以理解成自编码的过程。具体的操作是，generator 的 output，经过一个分类器，看是否能够得到 c。其实可以看成一个 anto-encoder 的反过程。其余的 discriminator 与常规的 GAN 是一样的。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://pic1.zhimg.com/80/v2-b85a31bbe8ed2b42a3ad11a707720674_720w.jpg&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://pic1.zhimg.com/80/v2-b85a31bbe8ed2b42a3ad11a707720674_720w.jpg&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;图片来自李宏毅老师生成对抗网络视频 https://www.youtube.com/watch?v=DMA4MrNieWo&amp;amp;list=PLJV_el3uVTsMq6JEFPW35BCiOQTsoqwNw&amp;amp;index=5&lt;/p&gt;
 &lt;p&gt;在实际过程中，classifier 和 discriminator 会共享参数，只有最后一层是不一样的，classifier 输出的是一个 vector, discriminator 输出的是一个标量。&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;h2 id=&#34;第一章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一章&#34;&gt;#&lt;/a&gt; 第一章：&lt;/h2&gt;
 &lt;p&gt;生成器的优点在于生成很容易，但只学习了真实样本的表象，只学到了 component 和 component 像素和像素之间的相似度，而没有学到图像和图像的关联。可以用生成器取代下面方程，产生负样本，产生 x~&lt;/p&gt;
 &lt;p&gt;以往是通过高斯混合模型定义 PG 然后用最大似然估计算出最优分布 PG 下的参数 sita，但这个模型可能更复杂，不用高斯…… 又难以计算。而现在用生成器找到一个分布，也就是用生成器可以生成一个很复杂的分布 PG。&lt;strong&gt;生成器 G 意图让生成的样本 PG 和真实样本 Pdata 之间的散度越小越好&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/nJGAp4UV1RF1nuDeWqVQ69/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/nJGAp4UV1RF1nuDeWqVQ69/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;PG 可以通过生成器的向量中生成，一张张图片，Pdata 可以通过真实数据集采样得到 那么如何通过生成器计算 PG 和 Pdata 的散度呢&lt;/p&gt;
 &lt;p&gt;判别器优点在于能够学到整个图像的关联，但很难生成图像，需要解 x~=arg max D (x）方程&lt;/p&gt;
 &lt;p&gt;1. 如何训练判别器 D 呢，首先固定 G，寻找让 max V (G,D) 的 D,。对每一个 x，都可以找一个不同的 D 让式子最大&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/eXSZqZfenTQMi81R31MB9/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/8kJUGdgeCEpjk6PQNytwaA/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/tLFB6bFnEXT2M3YHgA8mpC/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/eXSZqZfenTQMi81R31MB9/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/8kJUGdgeCEpjk6PQNytwaA/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/tLFB6bFnEXT2M3YHgA8mpC/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;第一步：固定 G，寻找 D，让 V 函数 max 第二步：在寻找到的 D 基础上固定不动，寻找让 maxV 最小的 G&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/3EA6zaGNngsbPAzqGY5y1y/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/3EA6zaGNngsbPAzqGY5y1y/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第四章基础理论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第四章基础理论&#34;&gt;#&lt;/a&gt; 第四章：基础理论&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/bqo7AayLPxFkVxuCRis5zE/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/bqo7AayLPxFkVxuCRis5zE/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;首先给定 G，找到 D&lt;em&gt; 并求出 V 对 sitaG 的梯度，用于更新 sitaG 找一个 D&lt;/em&gt; 从而 maxV 的过程就是找到 Pdata 和 PG 之间的 JS 散度 V (G1,D1*) 的过程&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/dV2swuC8a28CS4VfGDaZht/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/dV2swuC8a28CS4VfGDaZht/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;关键是：&lt;strong&gt;当更新 G0 后函数 V 可能会变化&lt;/strong&gt;，而此时的 D*（使 V 最大的横坐标位置）可能就变了，再用之前的 D * 训练就不靠谱。因此只能每次更新 G 一点点，假设每次更新后函数变化很小和之前是类似的，因此不太可能出现右图情况。 &lt;strong&gt;因此生成器 G 不能训练太多，通常只更新一次&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/xbN23FioNDynxriujmQFJZ/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/xbN23FioNDynxriujmQFJZ/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;期望 E 计算：实际上只能通过离散叠加求均值的方法来计算 V，实际上是从 Pdata 和 PG 中采样出一堆 x 来代替期望 E，训练一个二分类分类器→最小化交叉熵 = maxV&lt;/p&gt;
 &lt;p&gt;训练判别器的目的是：为了评估 JS 散度 从 Pdata 中采用出一堆 x 作为正样本，从 PG 中采样出一堆 x 作为负样本&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/7AT2kMos9ygmSLMdMvccww/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/7AT2kMos9ygmSLMdMvccww/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;每轮训练迭代过程：&lt;/p&gt;
 &lt;p&gt;1. 根据 Pdata（x）中采样 m 个 x，从先验分布中采样 m 个噪声向量 z→输入生成器→得到 m 个生成样本，更新判别器参数 sitad 从而→maxV&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;训练判别器目的&lt;/strong&gt;：为了估计 JS 散度才训练判别器，而用于估计 JS 散度的最优判别器的目标函数 V 是最大的，为了使其最大必定需要多轮重复迭代训练→直到收敛→&lt;strong&gt;可以更新 k 次&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;** 训练生成器目的：** 为了最小化 JS 散度，而由于生成器每次训练会导致目标函数变化，&lt;strong&gt;因此每次只训练更新一次&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/w971ot17oG8iSzZTphWndg/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;hr&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/w971ot17oG8iSzZTphWndg/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
 &lt;h2 id=&#34;fgan框架&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#fgan框架&#34;&gt;#&lt;/a&gt; fGAN 框架&lt;/h2&gt;
 &lt;p&gt;用不同 f - 散度量生成样本和真实样本的差距 p (x) 和 q（x）分别代表从 x 从 p 分布和从 q 分布采样出来的几率 p 和 q 之间的散度：&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;h2 id=&#34;info-ganvae-gan-bigan&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#info-ganvae-gan-bigan&#34;&gt;#&lt;/a&gt; Info GAN,VAE GAN, BiGAN&lt;/h2&gt;
 &lt;p&gt;编码器和解码器输入输出不相连，判别器输入 z 和图像，判断是来自编码器还是解码器&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/o4UXQGEAthzwVS7ZcWaWUi/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/tcLaeqdUR9ZqxFeGgQTbVK/image.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/o4UXQGEAthzwVS7ZcWaWUi/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/tcLaeqdUR9ZqxFeGgQTbVK/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -195,18 +195,18 @@
             <pubDate>Tue, 11 Oct 2022 19:30:59 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;亲密关系&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#亲密关系&#34;&gt;#&lt;/a&gt; 亲密关系&lt;/h1&gt;
 &lt;p&gt;练习：写下初遇时在伴侣身上发现的所有优点和相处至今的优点，另一张纸上写现在在对方身上看到的缺点，第一张表上列的每一项得十分，第二章表上列的扣十分&lt;/p&gt;
-&lt;p&gt;1、最初被某人吸引通常是由于情绪上的需求，这些需求来源于孩提时代未被满足的需要。孩童时期的主要需求：寻求归属感 —— 证明自己具有特殊价值 ——“想要变得特别”&lt;br&gt;
+&lt;p&gt;1、最初被某人吸引通常是由于情绪上的需求，这些需求来源于孩提时代未被满足的需要。孩童时期的主要需求：寻求归属感 —— 证明自己具有特殊价值 ——“想要变得特别”&lt;br /&gt;
  期待一个能无视我们所有缺点并且对自己的需求极大的人。&lt;/p&gt;
-&lt;p&gt;2、制造梦想的机器：从童年时期就开始绘制能满足自己一切期待的理想对象，随着年龄增长，期望越来越高&lt;br&gt;
+&lt;p&gt;2、制造梦想的机器：从童年时期就开始绘制能满足自己一切期待的理想对象，随着年龄增长，期望越来越高&lt;br /&gt;
  3、如果在现实中寻觅不到就开始在相处中对她未满足自己需求的方面进行改造&lt;/p&gt;
 &lt;h2 id=&#34;月晕期&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#月晕期&#34;&gt;#&lt;/a&gt; 月晕期&lt;/h2&gt;
 &lt;h3 id=&#34;通往地狱之路是用期望铺成的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#通往地狱之路是用期望铺成的&#34;&gt;#&lt;/a&gt; 通往地狱之路，是用期望铺成的&lt;/h3&gt;
 &lt;p&gt;期待与要求分为明说和暗示，在需求得到满足前我们不愿意去爱。&lt;/p&gt;
-&lt;p&gt;然而我的期望让我不能得到安抚，期望的目的是要让需求得到满足，但与此同时必然会出现两件事：&lt;br&gt;
-（1）我们内心缺乏爱，如果我们需要 sth，是因为我们没有&lt;br&gt;
+&lt;p&gt;然而我的期望让我不能得到安抚，期望的目的是要让需求得到满足，但与此同时必然会出现两件事：&lt;br /&gt;
+（1）我们内心缺乏爱，如果我们需要 sth，是因为我们没有&lt;br /&gt;
 （2）如果没有 sb 满足我们的需求，我们会觉得世界上没有足够的爱 —— 希望从他人身上得到爱只会让 “无人爱我” 的想法更牢不可破&lt;/p&gt;
 &lt;p&gt;因此期望是愤恨的前兆&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;       在对亲密关系不满意时问问自己，此时希望从伴侣身上得到的是什么？本质上是情绪上的事物，表面上看来则是实质的需求。&lt;/p&gt;
 &lt;p&gt;例：约好七点见面，但她八点才来，我不高兴但&lt;strong&gt;真正原因不是她迟到而是她让我觉得自己不够特别&lt;/strong&gt; —— 我希望她让我觉得自己很重要，重要到她应该愿意为了我而守时&lt;/p&gt;
 &lt;p&gt;了解自己期望背后的需求，我们通常只是希望伴侣做或说一些事，但却不会意识到我们希望他们这么做其实是满足自己某些情绪上的需求 —— 我们希望曲儿我们值得被爱&lt;/p&gt;
@@ -215,25 +215,25 @@
 &lt;p&gt;当找到自己真正的情绪需求后再问自己：我愿不愿意放弃这项期望呢 —— 我愿不愿意寻求自己内在的力量来满足我的所有需求呢？&lt;/p&gt;
 &lt;p&gt;如果答案是肯定的，那么&lt;strong&gt;直觉会告诉你该如何放手了&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;如果你有精神上的信仰，那么不妨把需求交给内心中高层次的力量&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;h3 id=&#34;如果决定放手那么如何满足需求呢事实是我们并不需要自己认为需要的东西&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#如果决定放手那么如何满足需求呢事实是我们并不需要自己认为需要的东西&#34;&gt;#&lt;/a&gt; 如果决定放手，那么如何满足需求呢？
 —— 事实是，我们并不需要自己认为需要的东西&lt;/h3&gt;
 &lt;p&gt;学会放手和接纳，明白自己原本就是一个完整的个体，所需的一切都存在于你的内心&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;h2 id=&#34;幻灭期&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#幻灭期&#34;&gt;#&lt;/a&gt; 幻灭期&lt;/h2&gt;
 &lt;p&gt;随着愤恨的到来，标志着进入第二阶段 —— 幻灭&lt;/p&gt;
-&lt;p&gt;幻灭带来偏差行为：&lt;br&gt;
-引起注意、权力斗争：满足孩子的两大需求&lt;br&gt;
+&lt;p&gt;幻灭带来偏差行为：&lt;br /&gt;
+引起注意、权力斗争：满足孩子的两大需求&lt;br /&gt;
 报复心理、自我放逐：当孩子觉得需求永远不会被满足时被深刻的沮丧痛苦驱使做出毁灭性行为&lt;/p&gt;
 &lt;p&gt;       远离造成痛苦的人并不会让痛苦消失，伴侣只是让我发觉到痛苦的存在。唤醒过去的伤痛，想要疗伤的企图往往导致亲密关系危机，和伴侣吵架只是为了不去感受旧痛，而伴侣所做的仅仅是让旧痛浮上意识表层。&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;h2 id=&#34;信念想法的果实&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信念想法的果实&#34;&gt;#&lt;/a&gt; 信念：想法的果实&lt;/h2&gt;
-&lt;p&gt;种下想法，就得到行动。种下行动，就得到习惯。&lt;br&gt;
+&lt;p&gt;种下想法，就得到行动。种下行动，就得到习惯。&lt;br /&gt;
 种下习惯，就得到人格。种下人格，就得到命运。&lt;/p&gt;
 &lt;p&gt;过去的创伤并不会随时间逝去，每个自我局限的信念都来自过去的创伤、痛苦的经验。所有未愈合伤口的信念都是自我局限的，&lt;/p&gt;
 &lt;p&gt;——&lt;strong&gt; 如果离开家的时候，你并不感到平静，那么你其实并没有离开&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;亲密关系中蕴含着治好旧伤的机会。而大多数情况是双方都试图控制对方的行为，借以控制过去的创伤。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cluoma%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221011193226891.png&#34; alt=&#34;image-20221011193226891&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cluoma%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221011193226891.png&#34; alt=&#34;image-20221011193226891&#34; /&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -258,7 +258,7 @@
 &lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;儒家：无所为而为。如果从未出世，那么做事总是有所为而为，做事都有目标目的，始终把自己做的事情看作是达到另外一个目的手段。&lt;br&gt;
+&lt;p&gt;儒家：无所为而为。如果从未出世，那么做事总是有所为而为，做事都有目标目的，始终把自己做的事情看作是达到另外一个目的手段。&lt;br /&gt;
 无所为而为 —— 这件事本应当做，它就是自己的价值 &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -271,13 +271,13 @@
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;人并非拥有选择自己拥有某种愿望的能力，只是拥有选择实现愿望的道路的能力，什么愿望来到我们心里并不是我们的自由，愿望就这么来了……&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;插入：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;西方哲学 —— 自身问题：关于世界的客观知识的前提基础是什么，获得客观可靠有效知识的方法是什么&lt;/li&gt;
 &lt;li&gt;中国哲学 —— 人生问题；佛学中国化（两汉之际）禅宗，儒道佛合流 (两宋时期)—— 王阳明心学&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;p&gt;一体之仁，当我们对鸟兽虫鱼的哀鸣生出恻隐之心，当我们与鸟兽虫鱼连为一体，人心感通宇宙万物，中国宇宙观。心之理 —— 不是心外之理，真理不要到心外去寻求 —— 万物皆备于我，反身而成，乐莫大焉。上乘孟子 “学问之道无他，求其放心而已”，学问 —— 已经被亡失的心重新召回。&lt;/p&gt;
 &lt;p&gt;《金刚经》核心思想 ——&lt;strong&gt; 因无所住而生其心&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -289,7 +289,7 @@
 &lt;li&gt;六色 —— 眼耳鼻舌身意 —— 着相；观金体本身 —— 不住相。&lt;/li&gt;
 &lt;li&gt;佛法在世间，不离世间觉。离世觅菩提，恰如求兔角&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/0071tL0Nly8h760vrtpq6j30u00u0myt.jpg&#34; alt=&#34;彼岸花&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://tva3.sinaimg.cn/large/0071tL0Nly8h760vrtpq6j30u00u0myt.jpg&#34; alt=&#34;彼岸花&#34; /&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -320,7 +320,7 @@
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzYyWlI1bTJBVER6OFoyUXdTN21rTTE=&#34;&gt;Redis&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tLzlDWUFFell4RXY3bzdoUnoxWHN3Q0E=&#34;&gt;Docker&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2p5VkdDdGZSYzRDeTFmaVlVWW1CdUI=&#34;&gt;Acwing 算法基础课&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;D:%5CWolai%5C%E7%AC%94%E8%AE%B0%5C%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF%5Cimage%5Cimage_v6vkTMI4J5.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;D:%5CWolai%5C%E7%AC%94%E8%AE%B0%5C%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF%5Cimage%5Cimage_v6vkTMI4J5.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;java学习路线一&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#java学习路线一&#34;&gt;#&lt;/a&gt; Java 学习路线一&lt;/h2&gt;
 &lt;p&gt;牛客链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubm93Y29kZXIuY29tL2Rpc2N1c3MvNDY0NzUwP3R5cGU9cG9zdCZhbXA7b3JkZXI9cmVjYWxsJmFtcDtwb3M9JmFtcDtwYWdlPTEmYW1wO25jVHJhY2VJZD0mYW1wO2NoYW5uZWw9LTEmYW1wO3NvdXJjZV9pZD1zZWFyY2hfcG9zdF9uY3RyYWNrJmFtcDtnaW9faWQ9QjcyMkIxMkMyODNEN0MwRDAxQzFCRDUxNTY5QTU2OTYtMTY1Nzg3Mzk3MDUwNA==&#34;&gt;https://www.nowcoder.com/discuss/464750?type=post&amp;amp;order=recall&amp;amp;pos=&amp;amp;page=1&amp;amp;ncTraceId=&amp;amp;channel=-1&amp;amp;source_id=search_post_nctrack&amp;amp;gio_id=B722B12C283D7C0D01C1BD51569A5696-1657873970504&lt;/span&gt;  &lt;/p&gt;
 &lt;p&gt;1 JVM&lt;/p&gt;
@@ -349,11 +349,11 @@
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vY2FvbGVpQ29kaW5nL3AvNjE3MDU1NS5odG1s&#34;&gt;https://www.cnblogs.com/caoleiCoding/p/6170555.html&lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&#34;经验&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#经验&#34;&gt;#&lt;/a&gt; 经验&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/v123411739/article/details/115498947?ops_request_misc=%7B%22request%5Fid%22%3A%22165910547516782388038827%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fall.%22%7D&amp;amp;request_id=165910547516782388038827&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-4-115498947-null-null.142%5Ev35%5Eexperiment_2_v1&amp;amp;utm_term=%E5%B0%9A%E7%A1%85%E8%B0%B7MySQL&amp;amp;spm=1018.2226.3001.4187&#34; title=&#34;https://blog.csdn.net/v123411739/article/details/115498947?ops_request_misc=%7B%22request%5Fid%22%3A%22165910547516782388038827%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fall.%22%7D&amp;amp;request_id=165910547516782388038827&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-4-115498947-null-null.142^v35^experiment_2_v1&amp;amp;utm_term=尚硅谷MySQL&amp;amp;spm=1018.2226.3001.4187&#34;&gt;https://blog.csdn.net/v123411739/article/details/115498947?ops_request_misc=%7B%22request%5Fid%22%3A%22165910547516782388038827%22%2C%22scm%22%3A%2220140713.130102334.pc%5Fall.%22%7D&amp;amp;request_id=165910547516782388038827&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-4-115498947-null-null.142&lt;sup&gt;v35&lt;/sup&gt;experiment_2_v1&amp;amp;utm_term = 尚硅谷 MySQL&amp;amp;spm=1018.2226.3001.4187&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;D:%5CWolai%5C%E7%AC%94%E8%AE%B0%5C%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF%5Cimage%5Cimage_A80nTpU_Sw.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;D:%5CWolai%5C%E7%AC%94%E8%AE%B0%5C%E8%BD%AC%E7%A0%81%E4%B9%8B%E8%B7%AF%5Cimage%5Cimage_A80nTpU_Sw.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL2NIeEJMSENtS253ZFJSM0J0MTFWNFU=&#34;&gt;IDEA 架构&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL3FNeFRSVDdIYmQ3NndzNUxXQlhYYzU=&#34;&gt;配置环境&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud29sYWkuY29tL3hnRjVVclpTNzdFRHJMcGhrQWFMMlE=&#34;&gt;设计模式&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
+&lt;hr /&gt;
 &lt;h2 id=&#34;神的博客笔记&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#神的博客笔记&#34;&gt;#&lt;/a&gt; 神的博客笔记：&lt;/h2&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sdnh1ZXlhbmcudmlwL3RhZ3MvSnVjLw==&#34;&gt;https://lvxueyang.vip/tags/Juc/&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueXVxdWUuY29tL2Z1eXVzYWthaW9yaS95YmMyZzg/dGhlbWU9bGlnaHQ=&#34;&gt;https://www.yuque.com/fuyusakaiori/ybc2g8?theme=light&lt;/span&gt;&lt;/p&gt;
