@@ -10,8 +10,29 @@
         </author>
         <description>思及我域</description>
         <language>zh-CN</language>
-        <pubDate>Sat, 15 Oct 2022 17:10:54 +0800</pubDate>
-        <lastBuildDate>Sat, 15 Oct 2022 17:10:54 +0800</lastBuildDate>
+        <pubDate>Tue, 18 Oct 2022 19:00:56 +0800</pubDate>
+        <lastBuildDate>Tue, 18 Oct 2022 19:00:56 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/18/%E8%A8%80/%E5%8F%B0%E9%A3%8E%E4%B8%8E%E7%A7%8B/</guid>
+            <title>台风与秋</title>
+            <link>https://aristotlednzk.github.io.com/2022/10/18/%E8%A8%80/%E5%8F%B0%E9%A3%8E%E4%B8%8E%E7%A7%8B/</link>
+            <category term="言" scheme="https://aristotlednzk.github.io.com/categories/%E8%A8%80/" />
+            <category term="言" scheme="https://aristotlednzk.github.io.com/tags/%E8%A8%80/" />
+            <category term="随笔集" scheme="https://aristotlednzk.github.io.com/tags/%E9%9A%8F%E7%AC%94%E9%9B%86/" />
+            <pubDate>Tue, 18 Oct 2022 19:00:56 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;深圳の秋&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#深圳の秋&#34;&gt;#&lt;/a&gt; 深圳の秋&lt;/h3&gt;
+&lt;p&gt;三点一线的路上：&lt;br /&gt;
+浮现出蚀之刻、真理与斗争的画面……&lt;/p&gt;
+&lt;p&gt;食堂：&lt;br /&gt;
+每次咬合齿肉镶嵌的冲击&lt;br /&gt;
+思考，进食动作带来的快感……&lt;/p&gt;
+&lt;p&gt;寒雨台风林海声：&lt;br /&gt;
+来自它的呼唤&lt;br /&gt;
+与世俱灭的斗志不允许你回顾从前……&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;远行即远征&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/15/cpp/Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/</guid>
             <title>Linux高性能服务器编程/socket篇</title>
@@ -440,7 +461,7 @@ src 为指向 IPV6 的地址，函数将该地址转换为&lt;strong&gt; in6_add
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zNzg1MjEzODM=&#34;&gt;https://zhuanlan.zhihu.com/p/378521383&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;GAN 架构包含两个子模式，分别称为&lt;strong&gt; Generator (G) 和&lt;/strong&gt; Discriminator (D) ，它们相互竞争，目的是通过训练过程达到 Nash 平衡。 生成器学习将潜在空间 (例如，噪声〜N &lt;em&gt;(0,1)&lt;/em&gt; ) 映射到在其上分发给定数据样本的数据空间，鉴别器评估生成器完成的映射。 生成器的主要作用是生成模仿训练数据集的合成数据，以使鉴别器无法将合成数据与真实数据区分开。&lt;/p&gt;
 &lt;p&gt;生成器的输入是随机噪声矢量_x&#39;_ (通常是均匀或正态分布)。 噪声向量通过 Generator 映射到新的数据空间，以获得伪样本_G (x&#39;)_ ，它是多维向量。 鉴别器是一个二进制分类器，它吸收了生成的数据集和训练的数据集，并学习将它们分类为假的和真实的。** 当判别器无法确定数据来自真实数据集还是生成器时，便会达到 GAN 模型的最佳状态 **&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/pSoih4oE9yFozGUVuiqZwi/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/GAN.png&#34; class=&#34;&#34; title=&#34;GAN&#34;&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2 id=&#34;可解释的生成对抗网络infogan&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可解释的生成对抗网络infogan&#34;&gt;#&lt;/a&gt; 可解释的生成对抗网络：InfoGAN&lt;/h2&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC81NTk0NTE2NA==&#34;&gt;https://zhuanlan.zhihu.com/p/55945164&lt;/span&gt;&lt;/p&gt;
@@ -455,37 +476,37 @@ src 为指向 IPV6 的地址，函数将该地址转换为&lt;strong&gt; in6_add
 &lt;h2 id=&#34;第一章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一章&#34;&gt;#&lt;/a&gt; 第一章：&lt;/h2&gt;
 &lt;p&gt;生成器的优点在于生成很容易，但只学习了真实样本的表象，只学到了 component 和 component 像素和像素之间的相似度，而没有学到图像和图像的关联。可以用生成器取代下面方程，产生负样本，产生 x~&lt;/p&gt;
 &lt;p&gt;以往是通过高斯混合模型定义 PG 然后用最大似然估计算出最优分布 PG 下的参数 sita，但这个模型可能更复杂，不用高斯…… 又难以计算。而现在用生成器找到一个分布，也就是用生成器可以生成一个很复杂的分布 PG。&lt;strong&gt;生成器 G 意图让生成的样本 PG 和真实样本 Pdata 之间的散度越小越好&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/nJGAp4UV1RF1nuDeWqVQ69/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;PG 可以通过生成器的向量中生成，一张张图片，Pdata 可以通过真实数据集采样得到 那么如何通过生成器计算 PG 和 Pdata 的散度呢&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/GAN1.png&#34; class=&#34;&#34; title=&#34;GAN1&#34;&gt;PG 可以通过生成器的向量中生成，一张张图片，Pdata 可以通过真实数据集采样得到 那么如何通过生成器计算 PG 和 Pdata 的散度呢&lt;/p&gt;
 &lt;p&gt;判别器优点在于能够学到整个图像的关联，但很难生成图像，需要解 x~=arg max D (x）方程&lt;/p&gt;
 &lt;p&gt;1. 如何训练判别器 D 呢，首先固定 G，寻找让 max V (G,D) 的 D,。对每一个 x，都可以找一个不同的 D 让式子最大&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/eXSZqZfenTQMi81R31MB9/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/8kJUGdgeCEpjk6PQNytwaA/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/tLFB6bFnEXT2M3YHgA8mpC/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;第一步：固定 G，寻找 D，让 V 函数 max 第二步：在寻找到的 D 基础上固定不动，寻找让 maxV 最小的 G&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/3EA6zaGNngsbPAzqGY5y1y/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/GAN2.png&#34; class=&#34;&#34; title=&#34;GAN2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;生成对抗网络 / GAN3.png&amp;quot; alt=&amp;quot;GAN3&amp;quot; style=&amp;quot;zoom:50%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;img src=&amp;quot;生成对抗网络 / GAN4.png&amp;quot; alt=&amp;quot;GAN4&amp;quot; style=&amp;quot;zoom:50%;&amp;quot; /&amp;gt;&lt;/p&gt;
+&lt;p&gt;第一步：固定 G，寻找 D，让 V 函数 max&lt;br /&gt;
+ 第二步：在寻找到的 D 基础上固定不动，寻找让 maxV 最小的 G&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/GAN5.png&#34; class=&#34;&#34; title=&#34;GAN5&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;第四章基础理论&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第四章基础理论&#34;&gt;#&lt;/a&gt; 第四章：基础理论&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/bqo7AayLPxFkVxuCRis5zE/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/GAN6.png&#34; class=&#34;&#34; title=&#34;GAN6&#34;&gt;&lt;/p&gt;
 &lt;p&gt;首先给定 G，找到 D&lt;em&gt; 并求出 V 对 sitaG 的梯度，用于更新 sitaG 找一个 D&lt;/em&gt; 从而 maxV 的过程就是找到 Pdata 和 PG 之间的 JS 散度 V (G1,D1*) 的过程&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/dV2swuC8a28CS4VfGDaZht/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/GAN7.png&#34; class=&#34;&#34; title=&#34;GAN7&#34;&gt;&lt;/p&gt;
 &lt;p&gt;关键是：&lt;strong&gt;当更新 G0 后函数 V 可能会变化&lt;/strong&gt;，而此时的 D*（使 V 最大的横坐标位置）可能就变了，再用之前的 D * 训练就不靠谱。因此只能每次更新 G 一点点，假设每次更新后函数变化很小和之前是类似的，因此不太可能出现右图情况。 &lt;strong&gt;因此生成器 G 不能训练太多，通常只更新一次&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/xbN23FioNDynxriujmQFJZ/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/GAN8.png&#34; class=&#34;&#34; title=&#34;GAN8&#34;&gt;&lt;/p&gt;
 &lt;p&gt;期望 E 计算：实际上只能通过离散叠加求均值的方法来计算 V，实际上是从 Pdata 和 PG 中采样出一堆 x 来代替期望 E，训练一个二分类分类器→最小化交叉熵 = maxV&lt;/p&gt;
 &lt;p&gt;训练判别器的目的是：为了评估 JS 散度 从 Pdata 中采用出一堆 x 作为正样本，从 PG 中采样出一堆 x 作为负样本&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/7AT2kMos9ygmSLMdMvccww/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/GAN9.png&#34; class=&#34;&#34; title=&#34;GAN9&#34;&gt;&lt;/p&gt;
 &lt;p&gt;每轮训练迭代过程：&lt;/p&gt;
 &lt;p&gt;1. 根据 Pdata（x）中采样 m 个 x，从先验分布中采样 m 个噪声向量 z→输入生成器→得到 m 个生成样本，更新判别器参数 sitad 从而→maxV&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;训练判别器目的&lt;/strong&gt;：为了估计 JS 散度才训练判别器，而用于估计 JS 散度的最优判别器的目标函数 V 是最大的，为了使其最大必定需要多轮重复迭代训练→直到收敛→&lt;strong&gt;可以更新 k 次&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;** 训练生成器目的：** 为了最小化 JS 散度，而由于生成器每次训练会导致目标函数变化，&lt;strong&gt;因此每次只训练更新一次&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/w971ot17oG8iSzZTphWndg/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/GAN10.png&#34; class=&#34;&#34; title=&#34;GAN10&#34;&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2 id=&#34;fgan框架&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#fgan框架&#34;&gt;#&lt;/a&gt; fGAN 框架&lt;/h2&gt;
 &lt;p&gt;用不同 f - 散度量生成样本和真实样本的差距 p (x) 和 q（x）分别代表从 x 从 p 分布和从 q 分布采样出来的几率 p 和 q 之间的散度：&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2 id=&#34;info-ganvae-gan-bigan&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#info-ganvae-gan-bigan&#34;&gt;#&lt;/a&gt; Info GAN,VAE GAN, BiGAN&lt;/h2&gt;
 &lt;p&gt;编码器和解码器输入输出不相连，判别器输入 z 和图像，判断是来自编码器还是解码器&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/o4UXQGEAthzwVS7ZcWaWUi/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://secure2.wostatic.cn/static/tcLaeqdUR9ZqxFeGgQTbVK/image.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/GAN11.png&#34; class=&#34;&#34; title=&#34;GAN11&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/12/GAN%E8%AF%BE%E9%A2%98/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9C/GAN12.png&#34; class=&#34;&#34; title=&#34;GAN12&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -565,7 +586,7 @@ src 为指向 IPV6 的地址，函数将该地址转换为&lt;strong&gt; in6_add
 &lt;p&gt;过去的创伤并不会随时间逝去，每个自我局限的信念都来自过去的创伤、痛苦的经验。所有未愈合伤口的信念都是自我局限的，&lt;/p&gt;
 &lt;p&gt;——&lt;strong&gt; 如果离开家的时候，你并不感到平静，那么你其实并没有离开&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;亲密关系中蕴含着治好旧伤的机会。而大多数情况是双方都试图控制对方的行为，借以控制过去的创伤。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;C:%5CUsers%5Cluoma%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20221011193226891.png&#34; alt=&#34;image-20221011193226891&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/11/%E9%97%BB%E8%AF%B4/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB/%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB-16660629207261.png&#34; class=&#34;&#34; title=&#34;亲密关系&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
