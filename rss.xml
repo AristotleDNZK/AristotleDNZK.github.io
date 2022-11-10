@@ -10,8 +10,178 @@
         </author>
         <description>思及我域</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 23 Oct 2022 14:28:16 +0800</pubDate>
-        <lastBuildDate>Sun, 23 Oct 2022 14:28:16 +0800</lastBuildDate>
+        <pubDate>Thu, 10 Nov 2022 18:49:44 +0800</pubDate>
+        <lastBuildDate>Thu, 10 Nov 2022 18:49:44 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/11/10/cpp/Tinywebserver%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/</guid>
+            <title>Tinywebserver项目记录</title>
+            <link>https://aristotlednzk.github.io.com/2022/11/10/cpp/Tinywebserver%E9%A1%B9%E7%9B%AE%E8%AE%B0%E5%BD%95/</link>
+            <category term="C++" scheme="https://aristotlednzk.github.io.com/categories/cpp/" />
+            <category term="项目" scheme="https://aristotlednzk.github.io.com/categories/cpp/%E9%A1%B9%E7%9B%AE/" />
+            <category term="C++" scheme="https://aristotlednzk.github.io.com/tags/C/" />
+            <category term="项目" scheme="https://aristotlednzk.github.io.com/tags/%E9%A1%B9%E7%9B%AE/" />
+            <pubDate>Thu, 10 Nov 2022 18:49:44 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;partimywebserver&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#partimywebserver&#34;&gt;#&lt;/a&gt; PartⅠ：mywebserver&lt;/h1&gt;
+&lt;h2 id=&#34;一-lockerhlockercpp-与tiny相同&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-lockerhlockercpp-与tiny相同&#34;&gt;#&lt;/a&gt; 一、locker.h，locker.cpp （与 Tiny 相同）&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;互斥锁类 locker&lt;/strong&gt;&lt;br /&gt;
+&amp;lt;u&amp;gt; 用于内存池 &amp;lt;/u&amp;gt;：请求队列（工作队列）的互斥访问&lt;/p&gt;
+&lt;p&gt;向工作队列中添加任务 append () 时，会访问 / 修改请求队列&lt;/p&gt;
+&lt;p&gt;线程中运行的主要逻辑：从请求队列中取出请求并执行其 process () 函数，故会访问 / 修改请求队列&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;条件变量类 cond&lt;/strong&gt;&lt;br /&gt;
+ 项目中没有用到&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;信号量类 sem&lt;/strong&gt;&lt;br /&gt;
+&amp;lt;u&amp;gt; 用于内存池 &amp;lt;/u&amp;gt;：&lt;strong&gt;请求队列 —— 生产者消费者模型&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;append () 向请求队列中添加请求，则信号量 ++（post ()）&lt;/p&gt;
+&lt;p&gt;run () 从请求队列中取出请求，则信号量–（wait ()）&lt;/p&gt;
+&lt;h2 id=&#34;二-threadpoolh-线程池&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二-threadpoolh-线程池&#34;&gt;#&lt;/a&gt; 二、threadpool.h 线程池&lt;/h2&gt;
+&lt;p&gt;创建多个线程&lt;br /&gt;
+创建一定数量（m_thread_number）的线程（pthread_create ()），线程的入口函数 worker () 需要是静态函数，原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5Mjc0NTAxL2FydGljbGUvZGV0YWlscy8xMTcwODMxNzU/dXRtX21lZGl1bT1kaXN0cmlidXRlLnBjX3JlbGV2YW50Lm5vbmUtdGFzay1ibG9nLWJhaWR1anNfYmFpZHVsYW5kaW5nd29yZC0wJmFtcDtzcG09MTAwMS4yMTAxLjMwMDEuNDI0Mg==&#34;&gt;https://blog.csdn.net/qq_39274501/article/details/117083175?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_baidulandingword-0&amp;amp;spm=1001.2101.3001.4242&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3MvUEI4dk13aThzQjRKdzNXekFLcFdPUQ==&#34;&gt;https://mp.weixin.qq.com/s/PB8vMwi8sB4Jw3WzAKpWOQ&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;类中调用 pthread_create () 时，类的成员函数作为 pthread_create () 的参数时，必须是静态函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;因为类的成员函数有一个隐藏的参数 ——this 指针，而线程的入口函数必须是接受一个 void 指针作为参数，故入口函数的参数中有一个隐藏的 this 指针是不允许的。为了解决矛盾，我们使用 static 成员函数，其独立于实例，参数中不会有 this 指针，故其可以用作线程的入口函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;将线程设为脱离&lt;/strong&gt;&lt;br /&gt;
+创建线程后，将线程设为脱离（pthread_detach ()），这是为了自动回收线程资源&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pthread_detach()的作用——当线程终止时，线程的资源将会立即被回收，而不用等待另一个线程调用pthread_join&lt;/code&gt; &lt;br /&gt;
+ &lt;code&gt;/* Indicate that the thread TH is never to be joined with PTHREAD\_JOIN.   The resources of TH will therefore be freed immediately when it   terminates, instead of waiting for another thread to perform PTHREAD\_JOIN   on it.  */&lt;/code&gt; &lt;br /&gt;
+ &lt;code&gt;extern int pthread\_detach (pthread\_t \_\_th) \_\_THROW;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;请求队列（工作队列）&lt;/strong&gt;&lt;br /&gt;
+请求队列 —— 以队列形式组织，其实现了：&lt;strong&gt;将主线程和工作线程解耦&lt;/strong&gt;（主线程向请求队列中添加任务，工作线程通过竞争来取得任务并执行任务）&lt;/p&gt;
+&lt;p&gt;请求队列的访问：由于会有多个线程对其进行访问 / 修改，故通过&lt;strong&gt;互斥锁实现互斥访问&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;工作线程竞争请求队列中的任务：&lt;strong&gt;通过信号量实现生产者 / 消费者模型&lt;/strong&gt;，任务交给哪个线程执行是随机的。（也可以用 Round Robin 算法让线程轮流获取任务）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工作线程们运行的函数&lt;/strong&gt;&lt;br /&gt;
+ worker ()-&amp;gt;run ()&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;worker ()：只是一个桥梁，静态成员函数，用作 pthread_create () 的参数；其中只是调用线程的主要逻辑 run ()&lt;/li&gt;
+&lt;li&gt;run ()：类的成员函数，需要静态成员函数 worker () 作为媒介来成为线程的工作函数。其主要逻辑：&amp;lt;u &amp;gt; 竟态获取请求队列中的任务 &amp;lt;/u&amp;gt;，通过调用请求类的 process 函数处理请求，process 函数调用 process_read 函数和 process_write 函数分别完成报文解析与报文响应两个任务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;只实现了 Proactor 模式&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;run () 中只执行 process () 过程，数据的读写是在主线程 main () 中完成的&lt;/li&gt;
+&lt;li&gt;reactor 模式的实现 —— 把数据读写放到工作线程中完成就行了（参考 Tinywebserver）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;三-maincpp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三-maincpp&#34;&gt;#&lt;/a&gt; 三、main.cpp&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;网络编程常规步骤&lt;/strong&gt;&lt;br /&gt;
+略&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;循环获取就绪事件并处理&lt;/strong&gt;&lt;br /&gt;
+这便是主线程的主要工作逻辑。&lt;/p&gt;
+&lt;p&gt;由于是 Proactor 模式，故可读可写事件发生时，main 中将数据读入 / 写出完毕，然后再通知工作线程进行后续逻辑处理&lt;/p&gt;
+&lt;p&gt;由于该项目中，写完成后，没有后续的处理逻辑，故只有读完成后才会通知工作线程（将任务 append 到线程池的请求队列）&lt;/p&gt;
+&lt;p&gt;项目中只实现了 LT+ONESHOT 模式。虽然是 LT 模式，但是由于是 ONESHOT，故也要用非阻塞 IO 循环读取以保证将 TCP 缓存中的数据全部读出。（在 ET 模式下，事件触发后需要将缓冲区中的数据完全读完，否则会陷入死锁，故必须要用非阻塞 IO 循环读取）。&lt;br /&gt;
+为什么必须要用 ONESHOT 呢？（ONESHOT 的作用）——《Linux 高性能服务器编程》P157：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;即使是用 ET 模式，一个 socket 上的事件还是可能被触发多次（LT 模式则更是如此），这在并发编程中就会引起一个问题：socket 上的数据被获取后，一个线程开始处理数据（此时 HTTP 请求报文可能并不完整）；而在处理数据的过程中，又有新的数据可读（EPOLLIN 再次被触发），此时另一个线程被唤醒去处理新到来的数据。这就会出现同时有两个线程操作同一个 socket 的情况，这显然是不被期望的。&lt;/li&gt;
+&lt;li&gt;正常情况应该是：数据到来–&amp;gt; 数据被读入 socket 对应的 http_conn 类对象 H 中–&amp;gt; 唤醒一个线程去操作这个类对象 H (处理数据)，数据处理过程中不应再次触发事件，避免又有另一个线程开始对该类对象 H 进行操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;四-http_connhhttp_conncpp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#四-http_connhhttp_conncpp&#34;&gt;#&lt;/a&gt; 四、http_conn.h，http_conn.cpp&lt;/h2&gt;
+&lt;h3 id=&#34;主要逻辑&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#主要逻辑&#34;&gt;#&lt;/a&gt; 主要逻辑&lt;/h3&gt;
+&lt;p&gt;** 处理 HTTP 请求：** 通过主从状态机&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;process_read ()—— 正常流程下，process_read () 返回的是 do_request () 的结果&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;parse_line()&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;get_line()&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;parse_request_line()&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;parse_hearders()&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;parse_content()&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;do_request ()：根据 HTTP 请求的解析结果，进行处理得到后续生成响应所需的前提状态&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先对 GET 请求和不同 POST 请求（登录，注册，请求图片，视频等等）做不同的预处理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取请求资源的信息，并判断请求的合法性：分析目标文件的属性，若目标文件存在、对所有用户可读且不是目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若合法：则将文件只读地打开，使用 mmap 将其映射到内存地址 m_file_address 处，并告诉调用者获取文件成功。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;处理 CGI&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;根据标志判断是登录检测还是注册检测&lt;/p&gt;
+&lt;p&gt;将用户名和密码提取出来&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;生成 HTTP 响应数据并放入发送缓存&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;process_write ()—— 根据 process_read ()（do_request ()）获得的文件合法性，生成响应报文放入发送缓冲区，并设置发送缓冲区的标志信息&lt;/li&gt;
+&lt;li&gt;process_write () 处理完成之后，注册 EPOLLOUT 事件，等待主线程调用 write () 发送缓冲区中的数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;其他函数&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;write ()—— 采用分散写 writev ()，客户请求的资源（响应体）和 process_write () 生成的报文数据（状态行和响应头），分别放在两块内存中，前者在文件映射到的内存中，后者在发送缓存中&lt;/li&gt;
+&lt;li&gt;setnonblocking ()、addfd ()、removefd ()、modfd () 等 socket 编程常用函数也定义在 http_conn.cpp 中（因为类中也会用到这些函数）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;有限状态机 - 处理 HTTP 请求中使用&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;主状态机：当前解析到哪部分（请求首行、请求头部、请求体）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第一行是首行，解析完直接跳到解析头部状态&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;头部解析时若遇到空行，则说明头部解析完毕，若有请求体则跳到解析请求体状态（头部中会有 Content-Length 来告诉你有没有请求体）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;请求体解析&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从状态机：请求数据的每一行的处理状态（完整的一行、不完整的一行、错误的一行）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;请求分析结果状态机：用于标记请求报文解析的结果，并用于决定后续的报文解析和响应生成&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;请求方法状态机：用于标记请求报文中的请求方法，该项目中只支持 GET&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;partii整个项目的模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#partii整个项目的模型&#34;&gt;#&lt;/a&gt; PartⅡ：整个项目的模型&lt;/h2&gt;
+&lt;h3 id=&#34;一-mywebserver&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一-mywebserver&#34;&gt;#&lt;/a&gt; 一、mywebserver：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;并发模式：半同步 / 半反应堆模式 —— 我认为应该叫 “半同步 / 半模拟前摄器模式”&lt;/li&gt;
+&lt;li&gt;事件处理（事件分发）模型：同步 IO 模拟的 Proactor 模型&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;二-tinywebserver&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二-tinywebserver&#34;&gt;#&lt;/a&gt; 二、Tinywebserver：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;并发模式：半同步 / 半反应堆模式、半同步 / 半模拟前摄器模式 都实现了（其实就是实现了下面的 Reactor 和模拟 Proactor）&lt;/li&gt;
+&lt;li&gt;事件处理（事件分发）模型：同步 IO 模拟的 Proactor 模型、Reactor 模型 都实现了（通过 threadpool.h 中的 m_actor_model 变量实现选择用哪种模型，就是选择 read () 和 write () 在主线程完成还是工作线程完成而已）&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/11/02/%E9%97%BB%E8%AF%B4/%E7%88%B1%E6%AC%B2%E4%B9%8B%E6%AD%BB/</guid>
+            <title>爱欲之死</title>
+            <link>https://aristotlednzk.github.io.com/2022/11/02/%E9%97%BB%E8%AF%B4/%E7%88%B1%E6%AC%B2%E4%B9%8B%E6%AD%BB/</link>
+            <category term="阅读笔记" scheme="https://aristotlednzk.github.io.com/categories/%E9%97%BB%E8%AF%B4/" />
+            <category term="西哲" scheme="https://aristotlednzk.github.io.com/tags/%E8%A5%BF%E5%93%B2/" />
+            <category term="阅读笔记" scheme="https://aristotlednzk.github.io.com/tags/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" />
+            <pubDate>Wed, 02 Nov 2022 22:07:23 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;reading中&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#reading中&#34;&gt;#&lt;/a&gt; Reading 中...&lt;/h3&gt;
+&lt;p&gt;作者：韩炳哲    韩裔德国哲学家&lt;/p&gt;
+&lt;p&gt;绩效社会、他者消失、否定性消失 balabala...&lt;/p&gt;
+&lt;p&gt;还未看完，持续更新～&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/10/23/%E8%A8%80/%E4%BA%BA%E7%B1%BB%E5%BE%80%E4%BA%8B/</guid>
             <title>人类往事</title>
