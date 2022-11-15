@@ -8,7 +8,147 @@
     <author>
       <name>Sean Barrett</name>
     </author>
-    <updated>2022-11-15T03:17:40.000Z</updated>
+    <updated>2022-11-15T03:28:58.000Z</updated>
+    <entry>
+        <id>https://aristotlednzk.github.io.com/2022/11/15/cpp/Linux%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%BC%80%E5%8F%91/</id>
+        <title>Linux多线程开发</title>
+        <link rel="alternate" href="https://aristotlednzk.github.io.com/2022/11/15/cpp/Linux%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+        <content type="html">&lt;h2 id=&#34;线程概念&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#线程概念&#34;&gt;#&lt;/a&gt; 线程概念&lt;/h2&gt;
+&lt;p&gt;与进程 (process）类似，线程 (thread) 是允许应用程序并发执行多个任务的一种机制。一个进程可以包含多个线程。同一个程序中的所有线程均会独立执行相同程序，且共享同一份全局内存区域，其中包括初始化数据段、未初始化数据段，以及堆内存段。(传统意义上的 UNIX 进程只是多线程程序的一个特例，该进程只包含一个线程)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;进程是 CPU 分配资源的最小单位，线程是操作系统调度执行的最小单位。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;线程是轻量级的进程（LWP: Light weight Process)，在 Linux 环境下线程的本质仍是进程。&lt;/p&gt;
+&lt;p&gt;查看指定进程的 LWP 号：ps -Lf pid&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进程之间的信息难以共享&lt;/li&gt;
+&lt;li&gt;fork（）创建进程的代价相对较高 —— 写时复制&lt;/li&gt;
+&lt;li&gt;创建线程是共用原来的虚拟地址空间，只是&lt;strong&gt;栈空间和代码段.text&lt;/strong&gt; 细分给不同线程，而堆空间都是共享的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/11/15/cpp/Linux%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%BC%80%E5%8F%91/%E5%A4%9A%E7%BA%BF%E7%A8%8B.png&#34; class=&#34;&#34; title=&#34;多线程&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;线程创建&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#线程创建&#34;&gt;#&lt;/a&gt; 线程创建&lt;/h2&gt;
+&lt;p&gt;main 函数所在线程称为主线程。 程序默认只有一个进程和线程&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;pthread_t tid;
+int ret=pthread_create(&amp;amp;tid,NULL,callback,NULL);
+
+int pthread_create(pthread_t *thread,const pthread_attr_t *attr,void *(start_routine) (void *),void *arg);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;thread: 传出参数，线程创建成功后，子线程的线程 ID 被写到该变量中 attr：设置线程的属性，默认值 NULL start_routine：函数指针，&lt;strong&gt;这个函数是子线程需要处理的逻辑代码&lt;/strong&gt; arg：第三个参数使用，传参&lt;/p&gt;
+&lt;p&gt;返回值：成功返回 0，失败返回错误号&lt;/p&gt;
+&lt;h2 id=&#34;线程同步&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#线程同步&#34;&gt;#&lt;/a&gt; 线程同步&lt;/h2&gt;
+&lt;p&gt;线程优势：能够通过全局变量来共享信息。但必须确保线程安全&lt;/p&gt;
+&lt;p&gt;临界区：访问共享资源的代码片段，并且这段代码的执行应该为原子操作 —— 同时访问同一个共享资源的线程不能执行该区域代码到一半中断。&lt;/p&gt;
+&lt;p&gt;线程同步：当有一个线程在对内存进行操作的时候，其他线程都不能对这个内存地址进行操作，知道该线程完成操作，其他线程都处于等待状态&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;终止线程&lt;/strong&gt;：在哪个线程中调用就终止哪个线程&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;pthread_exit(void* retval);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;retval：需要传递一个指针作为返回值，可以在 pthread_join () 中获取到&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;pthread_t pthread_self(void);
+pthread_self();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;获取当前的线程的线程 ID&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;pthread_exit(NULL);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;由于 return 0 会让进程退出，那所有线程资源都会被释放，因此可以在主线程中调用，让其他线程继续执行，单独&lt;strong&gt;让主线程退出，当主线程退出时，不会影响其他正常运行的线程&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;互斥量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#互斥量&#34;&gt;#&lt;/a&gt; 互斥量&lt;/h2&gt;
+&lt;p&gt;确保同时仅有一个线程可以访问某共享资源，保证对共享资源的原子访问。&lt;/p&gt;
+&lt;p&gt;互斥量有两种状态：已锁定和未锁定。至多只有一个线程可以锁定该互斥量。只有所有者才能给互斥量解锁&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;创建互斥量类型 pthread_mutex_t&lt;/strong&gt;：一般在全局创建，在主函数 main 中初始化&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;初始化互斥量&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int pthread_mutex_init(pthread_mutex_init *restrict mutex, const pthread_mutexattr_t attr);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;mutex：需要初始化的互斥量变量 attr：互斥量相关的属性，默认 NULL&lt;/p&gt;
+&lt;p&gt;restrict：C 语言修饰符，被修饰的指针不能由另外的一个指针进行操作&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;释放互斥量的资源&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int pthread_mutex_destroy(pthread_mutex_init * mutex);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;加锁：阻塞的&lt;/strong&gt;：如果已经有一个线程加锁了，那么其他线程只能阻塞等待&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int pthread_mutex_lock(pthread_mutex_init * mutex);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;解锁&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int pthread_mutex_unlock(pthread_mutex_init * mutex);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;条件变量互斥锁&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#条件变量互斥锁&#34;&gt;#&lt;/a&gt; 条件变量 + 互斥锁&lt;/h2&gt;
+&lt;p&gt;条件变量其实就是一种通知机制：当线程发现资源被锁定时条件变量就会将其阻塞，让出 CPU 的控制权给其他线程，当资源被释放时，那些阻塞线程被唤醒，线程重新检查资源可用性，从而获得资源并上锁或是重新阻塞。因此条件变量是一种通知模型的同步方式。&lt;/p&gt;
+&lt;p&gt;条件变量一般是用于&lt;strong&gt;让生产者线程和消费者线程之间以及消费者线程之间互斥的访问临界资源&lt;/strong&gt;（临界资源指的是&lt;strong&gt;同时只允许一个线程访问的共享资源&lt;/strong&gt;）。条件变量的使用一般是需要结合互斥锁来进行（条件变量相关函数的输入参数就是互斥锁），从而使得各个线程能够互斥的访问该临界资源。&lt;/p&gt;
+&lt;p&gt;想办法：当资源上的锁被释放时就通知等待该资源的线程，当有线程正在使用资源时就将其他想访问该资源的线程阻塞呢&lt;/p&gt;
+&lt;h3 id=&#34;二-条件变量的使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二-条件变量的使用&#34;&gt;#&lt;/a&gt; 二 条件变量的使用&lt;/h3&gt;
+&lt;p&gt;条件变量在 pthread.h 头文件中。&lt;/p&gt;
+&lt;h4 id=&#34;21-条件变量的初始化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#21-条件变量的初始化&#34;&gt;#&lt;/a&gt; 2.1 条件变量的初始化&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int pthread_cond_init(pthread_cond_t* *cond,const pthread_condattr_t* *cond_attr);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;函数功能：用于初始化一个条件变量。&lt;/p&gt;
+&lt;p&gt;函数参数：&lt;/p&gt;
+&lt;p&gt;1.cond：用于指向目标条件变量。&lt;/p&gt;
+&lt;p&gt;2.cond_attr：用于设置条件变量属性，置 NULL 表示条件变量属性为默认值。&lt;/p&gt;
+&lt;h4 id=&#34;22-条件变量的销毁&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#22-条件变量的销毁&#34;&gt;#&lt;/a&gt; 2.2 条件变量的销毁&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int pthread_cond_destroy(pthread_cond_t*cond);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;函数功能：用于销毁条件变量。&lt;/p&gt;
+&lt;h4 id=&#34;23-条件变量的通知机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#23-条件变量的通知机制&#34;&gt;#&lt;/a&gt; 2.3 条件变量的通知机制&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int pthread_cond_signal(pthread_cond_t**cond);
+int pthread_cond_broadcast(pthread_cond_t**cond);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;函数功能：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;条件变量的通知方法有两种：&lt;/p&gt;
+&lt;p&gt;1. 根据线程的优先级和调度策略唤醒一个等待条件变量的线程的 pthread_cond_signal () 函数&lt;/p&gt;
+&lt;p&gt;2. 唤醒所有等待条件变量的线程的 pthread_cond_broadcast () 函数。&lt;/p&gt;
+&lt;h4 id=&#34;24-条件变量的等待&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#24-条件变量的等待&#34;&gt;#&lt;/a&gt; 2.4 条件变量的等待&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int pthread_cond_wait(pthread_cond_t**cond，pthread_mutex_t* *mutex);
+int pthread_cond_timedwait(pthread_cond_t*cond，pthread_mutex_t *mutex,const struct timespec *abstime);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;pthread_cond_wait&lt;/strong&gt; 函数功能：调用该函数的线程会阻塞等待&lt;/p&gt;
+&lt;p&gt;当没有容器内数据了，用于&lt;strong&gt;阻塞等待生产者生产数据，直到符合某个条件变量&lt;/strong&gt;即被其他线程调用 pthread_cond_signal 唤醒才继续执行。函数的内部实现机制是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1. 当调用该函数前，一般会判断某个临界资源是否满足要求，如果不满足，则调用该函数，函数内部实现：&lt;strong&gt;将该线程挂起放在条件变量的请求队列，然后解除互斥锁&lt;/strong&gt;（以便生产者拿到锁去生产数据）；&lt;/li&gt;
+&lt;li&gt;2. 当该&lt;strong&gt;线程被唤醒不阻塞时，会再次对互斥锁加锁&lt;/strong&gt;，然后返回，从而继续判断临界资源是否满足条件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;pthread_cond_timedwait 函数功能：等待多长时间，调用了这个函数，线程会阻塞，直到指定时间结束&lt;/p&gt;
+&lt;h4 id=&#34;25-条件变量为什么要和互斥锁结合使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#25-条件变量为什么要和互斥锁结合使用&#34;&gt;#&lt;/a&gt; 2.5 条件变量为什么要和互斥锁结合使用&lt;/h4&gt;
+&lt;p&gt;我个人的理解是，&lt;strong&gt;条件变量主要是使用一种通知机制来让各个线程来处理临界资源，但是为了保证线程安全，需要使得各个线程来互斥的访问临界资源&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;如果没有互斥锁，则：&lt;/p&gt;
+&lt;p&gt;1. 调用条件变量通知函数唤醒所有的等待线程的话，很有可能导致临界资源被多个线程重复处理，甚至导致错误的发生，因此为了方便，每个线程被唤醒返回 pthread_cond_wait () 函数时，一般会对互斥锁加锁，这样其他被唤醒的线程只能阻塞等待此线程释放该互斥锁，从而实现互斥的对于临界资源的访问。&lt;/p&gt;
+&lt;p&gt;2. 当此&lt;strong&gt;线程处理完临界资源后&lt;/strong&gt;会在此调用 pthread_cond_wait () 函数，&lt;strong&gt;将该线程挂起至等待条件变量队列&lt;/strong&gt;，然后释放互斥锁，让其他线程被唤醒继续处理该临界资源。&lt;/p&gt;
+&lt;h3 id=&#34;问题集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题集&#34;&gt;#&lt;/a&gt; 问题集：&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt; &lt;code&gt;pthread_cond_wait内部为什么要解锁？&lt;/code&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果 while 或者 if 判断的时候，满足执行条件，线程便会调用 pthread_cond_wait 阻塞自己，此时它还在持有锁，如果他不解锁，那么其他线程将会无法访问公有资源。&lt;/p&gt;
+&lt;p&gt;具体到 pthread_cond_wait 的内部实现，当 pthread_cond_wait 被调用线程阻塞的时候，pthread_cond_wait 会自动释放互斥锁。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;code&gt;为什么要把调用线程放入条件变量的请求队列后再解锁？&lt;/code&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;线程是并发执行的，如果在把调用线程 A 放在等待队列之前，就释放了互斥锁，这就意味着其他线程比如线程 B 可以获得互斥锁去访问公有资源，这时候线程 A 所等待的条件改变了，但是它&lt;strong&gt;没有被放在等待队列上，导致 A 忽略了等待条件被满足的信号。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;倘若在线程 A 调用 pthread_cond_wait 开始，到把 A 放在等待队列的过程中，都持有互斥锁，其他线程无法得到互斥锁，就不能改变公有资源。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;code&gt;为什么最后还要加锁？&lt;/code&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;将线程放在条件变量的请求队列后，将其解锁，此时等待被唤醒，若成功竞争到互斥锁，再次加锁。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;code&gt;为什么判断线程执行的条件用while而不是if？&lt;/code&gt; &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一般来说，在多线程资源竞争的时候，在一个使用资源的线程里面（消费者）判断资源是否可用，不可用，便调用 pthread_cond_wait，在另一个线程里面（生产者）如果判断资源可用的话，则调用 pthread_cond_signal 发送一个资源可用信号。&lt;/p&gt;
+&lt;p&gt;在 wait 成功之后，资源就一定可以被使用么？答案是否定的，如果同时有两个或者两个以上的线程正在等待此资源，wait 返回后，资源可能已经被使用了。&lt;/p&gt;
+&lt;p&gt;再具体点，&lt;strong&gt;有可能多个线程都在等待这个资源可用的信号，信号发出后只有一个资源可用&lt;/strong&gt;，但是有 A，B 两个线程都在等待，B 比较速度快，获得互斥锁，然后加锁，消耗资源，然后解锁，&lt;strong&gt;之后 A 获得互斥锁，但 A 回去发现资源已经被使用了&lt;/strong&gt;，它便有两个选择，一个是去访问不存在的资源，另一个就是继续等待，那么&lt;strong&gt;继续等待下去的条件就是使用 while&lt;/strong&gt;，要不然使用 if 的话 pthread_cond_wait 返回后，就会顺序执行下去。&lt;/p&gt;
+&lt;p&gt;所以，在这种情况下，应该使用 while 而不是 if:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;while(resource == FALSE)  
+pthread_cond_wait(&amp;amp;cond, &amp;amp;mutex);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果只有一个消费者，那么使用 if 是可以的。&lt;/p&gt;
+&lt;h2 id=&#34;信号量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信号量&#34;&gt;#&lt;/a&gt; 信号量&lt;/h2&gt;
+&lt;p&gt;本身不能保证线程安全，需要和互斥锁一起使用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;信号量初始化&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int sem_init(sem_t *sem,int pshared,unsigned int value);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;value：设置信号量中的值，表示可用的资源个数。类比灯泡用一个灭一个 sem：信号量变量的地址 pshared：代表这个变量是用在线程之间（0）还是进程之间（非 0）&lt;/p&gt;
+&lt;p&gt;** 加锁一个信号量：**&lt;strong&gt; 阻塞函数 - 对信号量值减一&lt;/strong&gt;：当调用的信号量 sem 中的值 value 为 0 时才阻塞，&lt;strong&gt; 调用一次 wait，value 值 - 1&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int sem_wait(sem_t *sem);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;解锁一个信号量&lt;/strong&gt;：&lt;strong&gt;增加信号量的值&lt;/strong&gt;：&lt;strong&gt;调用一次 value+1&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int sem_post(sem_t *sem);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;释放资源&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;int sem_destroy(sem_t *sem);
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="cpp" scheme="https://aristotlednzk.github.io.com/categories/cpp/" />
+        <category term="项目" scheme="https://aristotlednzk.github.io.com/categories/cpp/%E9%A1%B9%E7%9B%AE/" />
+        <category term="Linux高性能服务器编程" scheme="https://aristotlednzk.github.io.com/categories/cpp/%E9%A1%B9%E7%9B%AE/Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B/" />
+        <category term="Linux高性能服务器编程" scheme="https://aristotlednzk.github.io.com/tags/Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B/" />
+        <category term="C++" scheme="https://aristotlednzk.github.io.com/tags/C/" />
+        <category term="项目" scheme="https://aristotlednzk.github.io.com/tags/%E9%A1%B9%E7%9B%AE/" />
+        <updated>2022-11-15T03:28:58.000Z</updated>
+    </entry>
     <entry>
         <id>https://aristotlednzk.github.io.com/2022/11/15/cpp/%E5%8D%8A%E5%90%8C%E6%AD%A5-%E5%8D%8A%E5%8F%8D%E5%BA%94%E5%A0%86%E7%BA%BF%E7%A8%8B%E6%B1%A0/</id>
         <title>半同步/半反应堆线程池</title>
@@ -140,16 +280,16 @@
 &lt;/blockquote&gt;
 &lt;hr /&gt;
 </content>
-        <category term="C++" scheme="https://aristotlednzk.github.io.com/categories/cpp/" />
+        <category term="cpp" scheme="https://aristotlednzk.github.io.com/categories/cpp/" />
         <category term="项目" scheme="https://aristotlednzk.github.io.com/categories/cpp/%E9%A1%B9%E7%9B%AE/" />
-        <category term="C++" scheme="https://aristotlednzk.github.io.com/tags/C/" />
         <category term="项目" scheme="https://aristotlednzk.github.io.com/tags/%E9%A1%B9%E7%9B%AE/" />
+        <category term="c++" scheme="https://aristotlednzk.github.io.com/tags/c/" />
         <updated>2022-11-15T03:17:40.000Z</updated>
     </entry>
     <entry>
-        <id>https://aristotlednzk.github.io.com/2022/11/15/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/</id>
+        <id>https://aristotlednzk.github.io.com/2022/11/15/cpp/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/</id>
         <title>IO多路复用</title>
-        <link rel="alternate" href="https://aristotlednzk.github.io.com/2022/11/15/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/"/>
+        <link rel="alternate" href="https://aristotlednzk.github.io.com/2022/11/15/cpp/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/"/>
         <content type="html"></content>
         <updated>2022-11-15T03:16:14.000Z</updated>
     </entry>
@@ -810,9 +950,9 @@ return 0;
         <category term="webserver" scheme="https://aristotlednzk.github.io.com/categories/cpp/%E9%A1%B9%E7%9B%AE/webserver/" />
         <category term="socket篇" scheme="https://aristotlednzk.github.io.com/categories/cpp/%E9%A1%B9%E7%9B%AE/webserver/socket%E7%AF%87/" />
         <category term="C++" scheme="https://aristotlednzk.github.io.com/tags/C/" />
+        <category term="项目" scheme="https://aristotlednzk.github.io.com/tags/%E9%A1%B9%E7%9B%AE/" />
         <category term="webserver" scheme="https://aristotlednzk.github.io.com/tags/webserver/" />
         <category term="socket篇" scheme="https://aristotlednzk.github.io.com/tags/socket%E7%AF%87/" />
-        <category term="项目" scheme="https://aristotlednzk.github.io.com/tags/%E9%A1%B9%E7%9B%AE/" />
         <updated>2022-10-15T09:10:54.000Z</updated>
     </entry>
     <entry>
