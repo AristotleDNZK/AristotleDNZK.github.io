@@ -16,7 +16,7 @@
             <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/11/15/cpp/Linux%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%BC%80%E5%8F%91/</guid>
             <title>Linux多线程开发</title>
             <link>https://aristotlednzk.github.io.com/2022/11/15/cpp/Linux%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%BC%80%E5%8F%91/</link>
-            <category term="cpp" scheme="https://aristotlednzk.github.io.com/categories/cpp/" />
+            <category term="C++" scheme="https://aristotlednzk.github.io.com/categories/cpp/" />
             <category term="项目" scheme="https://aristotlednzk.github.io.com/categories/cpp/%E9%A1%B9%E7%9B%AE/" />
             <category term="Linux高性能服务器编程" scheme="https://aristotlednzk.github.io.com/categories/cpp/%E9%A1%B9%E7%9B%AE/Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B/" />
             <category term="C++" scheme="https://aristotlednzk.github.io.com/tags/C/" />
@@ -156,10 +156,10 @@ pthread_cond_wait(&amp;amp;cond, &amp;amp;mutex);
             <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/11/15/cpp/%E5%8D%8A%E5%90%8C%E6%AD%A5-%E5%8D%8A%E5%8F%8D%E5%BA%94%E5%A0%86%E7%BA%BF%E7%A8%8B%E6%B1%A0/</guid>
             <title>半同步/半反应堆线程池</title>
             <link>https://aristotlednzk.github.io.com/2022/11/15/cpp/%E5%8D%8A%E5%90%8C%E6%AD%A5-%E5%8D%8A%E5%8F%8D%E5%BA%94%E5%A0%86%E7%BA%BF%E7%A8%8B%E6%B1%A0/</link>
-            <category term="cpp" scheme="https://aristotlednzk.github.io.com/categories/cpp/" />
+            <category term="C++" scheme="https://aristotlednzk.github.io.com/categories/cpp/" />
             <category term="项目" scheme="https://aristotlednzk.github.io.com/categories/cpp/%E9%A1%B9%E7%9B%AE/" />
+            <category term="C++" scheme="https://aristotlednzk.github.io.com/tags/C/" />
             <category term="项目" scheme="https://aristotlednzk.github.io.com/tags/%E9%A1%B9%E7%9B%AE/" />
-            <category term="c++" scheme="https://aristotlednzk.github.io.com/tags/c/" />
             <pubDate>Tue, 15 Nov 2022 11:17:40 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;两种高效的事件处理事件分发模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#两种高效的事件处理事件分发模式&#34;&gt;#&lt;/a&gt; 两种高效的事件处理（事件分发）模式&lt;/h2&gt;
 &lt;ul&gt;
@@ -293,7 +293,7 @@ pthread_cond_wait(&amp;amp;cond, &amp;amp;mutex);
             <guid isPermalink="true">https://aristotlednzk.github.io.com/2022/11/15/cpp/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/</guid>
             <title>IO多路复用</title>
             <link>https://aristotlednzk.github.io.com/2022/11/15/cpp/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/</link>
-            <category term="cpp" scheme="https://aristotlednzk.github.io.com/categories/cpp/" />
+            <category term="C++" scheme="https://aristotlednzk.github.io.com/categories/cpp/" />
             <category term="项目" scheme="https://aristotlednzk.github.io.com/categories/cpp/%E9%A1%B9%E7%9B%AE/" />
             <category term="Linux高性能服务器编程" scheme="https://aristotlednzk.github.io.com/categories/cpp/%E9%A1%B9%E7%9B%AE/Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B/" />
             <category term="C++" scheme="https://aristotlednzk.github.io.com/tags/C/" />
@@ -777,15 +777,15 @@ Singleton* Singleton::getInstance() //类外定义/实现
 &lt;p&gt;unsigned short int→两个字节&lt;/p&gt;
 &lt;p&gt;旧版：&lt;/p&gt;
 &lt;p&gt;sa_family_t sa_family;//sa_family_t 地址族类型 char sa_data [14];// 只有 14 个字节&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374177221.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/15/cpp/Linux%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%EF%BC%9Asocket%E3%80%81IO%E5%A4%8D%E7%94%A8%E3%80%81epoll/image.png&#34; class=&#34;&#34; title=&#34;image&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;专用socket地址&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#专用socket地址&#34;&gt;#&lt;/a&gt; 专用 socket 地址&lt;/h3&gt;
 &lt;p&gt;在设置和获取 IP 地址和端口号的上海更方便&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;TCP 协议族 sockaddr_in 和 sockaddr_in6 两个专用 socket 地址结构体，分别用 IP v4 和 IP v6 所有 socket 编程接口使用的地址参数类型都是&lt;strong&gt; sockaddr&lt;/strong&gt;→专用 socket 地址类型的遍历实际使用需要转换为通用 socket 地址类型 sockaddr&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-16684837417681.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/15/cpp/Linux%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%EF%BC%9Asocket%E3%80%81IO%E5%A4%8D%E7%94%A8%E3%80%81epoll/2.png&#34; class=&#34;&#34; width=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;sockaddr_in 每段都划分好了相应成员，最终转换为 sockaddr 指针即可&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-16684837417682.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;// TCP/IP 协议族有 sockaddr_in 和 sockaddr_in6 两个专用的 socket 地址结构体，它们分别用于 IPv4 和 IPv6：
 #include &amp;lt;netinet/in.h&amp;gt;
 struct sockaddr_in&amp;#123;
@@ -1104,10 +1104,10 @@ sizeof (object);   // 或 sizeof object 都属于 sizeof 对象；&lt;/p&gt;
 &lt;li&gt;当我们调用 listen 函数以后，改套接字的状态就变成了 LISTEN 监听状态，此时，处于等待客户端连入的状态。&lt;/li&gt;
 &lt;li&gt;对于一个调用 listen 进行监听的套接字’操作系统会为其维护 2 个队列：未完成连接队列和已完成连接队列。 （1）未完成连接队列中的连接 当客户端发送 TCP 连接三次握手的第 1 次（即 SYN 包）时，服务器端会在未完成连接队列中创建一个与该 SYN 包对应的项，可以把该项看成一个半连接（因为连接尚未建立）该半连接的状态会从 LISTEN 变成 SYNRCVD 同时向客户端返回第 2 次握手的包。 （SYN’ACK）而此时服务器正在等待完成第 3 次握手 （2）已完成连接队列中的连接 3 次握手完成后该连接就变成 ESTABLISHED 状态，每个已经完成 3 次握手的客户端连接（完整说法应该是 “服务器端的与客户端对应的 socket 连接”）都放在这个队列中作为一项。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-16684837417683.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;p&gt;从上图可以看到客户端发送的三次握手从第 1 个 SYN 包到 ** &lt;code&gt;在三次握手完成之前&lt;/code&gt; &lt;strong&gt;连接都会在未完成连接队列中；直到&lt;/strong&gt; &lt;code&gt;在三次握手完成后&lt;/code&gt;  ** 该连接就从未完成连接队列转移到已完成连接队列&lt;/p&gt;
 &lt;p&gt;而 listen 函数” 曾经 “的含义为这两个队列的和不超过 backlog，实际上由于操作系统的原因可能会比这个值稍微多一些。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-16684837417684.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3 id=&#34;web服务器端通过socket监听来自用户的请求&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web服务器端通过socket监听来自用户的请求&#34;&gt;#&lt;/a&gt; Web 服务器端通过 &lt;code&gt;socket&lt;/code&gt;  监听来自用户的请求。&lt;/h3&gt;
 &lt;p&gt;源代码如下：&lt;/p&gt;
@@ -1194,8 +1194,8 @@ src 为指向 IPV6 的地址，函数将该地址转换为&lt;strong&gt; in6_add
 &lt;p&gt;&lt;strong&gt;用户区中堆是共享，每个线程对应一个栈区 —— 不共享&lt;/strong&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1 id=&#34;tcp状态转换&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tcp状态转换&#34;&gt;#&lt;/a&gt; TCP 状态转换&lt;/h1&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-16684837417685.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-16684837417686.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/15/cpp/Linux%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%EF%BC%9Asocket%E3%80%81IO%E5%A4%8D%E7%94%A8%E3%80%81epoll/image-16684837417685.png&#34; class=&#34;&#34; title=&#34;image-16684837417685&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/15/cpp/Linux%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%EF%BC%9Asocket%E3%80%81IO%E5%A4%8D%E7%94%A8%E3%80%81epoll/image-16684837417686.png&#34; class=&#34;&#34; title=&#34;image-16684837417686&#34;&gt;&lt;/p&gt;
 &lt;p&gt;（红色实现可以视为客户端发送请求，绿色虚线视为服务器，黑色是一些异常）&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;为什么在服务端要分两次发送 ACK 和 FIN，不一次性发送 —— 为什么第二第三次挥手不合并？&lt;/p&gt;
@@ -1234,7 +1234,7 @@ how: 允许为shutdown操作选择以下几种方式:
 &lt;blockquote&gt;
 &lt;p&gt;tcp 协议中 FIN_WAIT2 到 Time_wait 的状态是有时间的，如果超过这个时间，服务端内核就会直接结束，所以如果服务端在 FIN_WAIT_2 状态一定时间后会自动结束进程&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-16684837417687.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/2022/10/15/cpp/Linux%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%EF%BC%9Asocket%E3%80%81IO%E5%A4%8D%E7%94%A8%E3%80%81epoll/image-16684837417687.png&#34; class=&#34;&#34; title=&#34;image-16684837417687&#34;&gt;&lt;/p&gt;
 &lt;p&gt;当客户端也断开后（给服务端发送了 FIN），服务端进入 TIME_WAIT&lt;/p&gt;
 &lt;p&gt;端口复用最常用的用途是:&lt;/p&gt;
 &lt;ul&gt;
@@ -1296,7 +1296,7 @@ netstat
 -p 显示正在使用socket的程序的名称
 -n 直接使用IP地址，而不通过域名服务器
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-16684837417698.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;p&gt;0.0.0.0ip 绑定了 9999 端口号，server 是应用程序的名称&lt;/p&gt;
 &lt;h2 id=&#34;io多路复用io多路转接面试必问&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#io多路复用io多路转接面试必问&#34;&gt;#&lt;/a&gt; I/O 多路复用（I/O 多路转接）面试必问&lt;/h2&gt;
 &lt;h3 id=&#34;select-poll-和-epoll要手动写出来知道原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#select-poll-和-epoll要手动写出来知道原理&#34;&gt;#&lt;/a&gt; &lt;strong&gt;select、poll 和 epoll&lt;/strong&gt; 要手动写出来，知道原理&lt;/h3&gt;
@@ -1305,22 +1305,21 @@ netstat
 &lt;li&gt;之前的做法是一个一个文件描述符去遍历，无法同时监听&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;输入输出对应的是程序和内存： 输入：程序 / 文件→内存 输出：内存→文件&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-16684837417699.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;阻塞等待 (（阻塞 IO 模型即 BIO 模型）&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374176910.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374176911.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;p&gt;每有一个客户端连接进来，就创建一个线程去读取接收客户端数据，而主线程不受影响&lt;/p&gt;
 &lt;h3 id=&#34;非阻塞忙轮询非阻塞模型即nio&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#非阻塞忙轮询非阻塞模型即nio&#34;&gt;#&lt;/a&gt; 非阻塞，忙轮询（非阻塞模型即 NIO）&lt;/h3&gt;
-&lt;p&gt;可以设置 read 不阻塞，此时有数据就读，没数据就返回一个值继续往下执行，但需要不断循环判断是否有数据进来&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374176912.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374176913.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;可以设置 read 不阻塞，此时有数据就读，没数据就返回一个值继续往下执行，但需要不断循环判断是否有数据进来 &lt;img data-src=&#34;/2022/10/15/cpp/Linux%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%EF%BC%9Asocket%E3%80%81IO%E5%A4%8D%E7%94%A8%E3%80%81epoll/ock.png&#34; class=&#34;&#34; title=&#34;ock&#34;&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;p&gt;当有客户端连接进来，accept 就将该 cfd 添加到一个表里面；然后再逐个判断每个文件描述符 cfd 是否有数据通信，当有数据通信就调用 read/recv 读取，没有就继续往下循环。&lt;/p&gt;
 &lt;p&gt;当客户端数量巨大时逐个遍历是否有数据写入&lt;/p&gt;
 &lt;p&gt;IO 多路转接&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374176914.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374176915.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;p&gt;现在将所有客户端的文件描述符 cfd 统一交给内核，内核去检测再返回，因此只调用了一次就查出是哪个&lt;/p&gt;
 &lt;h2 id=&#34;select-api介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#select-api介绍&#34;&gt;#&lt;/a&gt; select API 介绍&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -1406,11 +1405,11 @@ void FD_ZERO(fd_set *set);
 &lt;p&gt;1. 要检测读缓冲区，首先建立一个 fd_set，存放每个文件描述符读缓冲区的标志位。每个比特位代表一个文件描述符 （注意前三个是被占用的！）&lt;/p&gt;
 &lt;p&gt;2. 然后将要检测的文件描述符标志位置 1, 以上都是在用户态中进行&lt;/p&gt;
 &lt;p&gt;3. 之后调用 select，将 fd_set 拷贝到内核态检测有哪些位是有数据→置 1，没有数据的→置 0，再将结构 fd_set 返回到用户态，用户只需要一次遍历用户态中的 fd_set 就能知道有多少文件描述符有数据&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374176916.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;h2 id=&#34;poll-api介绍及代码编写&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#poll-api介绍及代码编写&#34;&gt;#&lt;/a&gt; poll API 介绍及代码编写&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;核心：将主动询问内核转变为等待内核通知&lt;/strong&gt;，从主动轮询→被动通知 &lt;strong&gt;一次系统调用 select/poll 就可以实现管理多个 client 事件（读写 accept 等）&lt;/strong&gt;，降低非阻塞 IO 频繁无效系统调用问题&lt;/p&gt;
 &lt;p&gt;select () 函数缺点：&lt;strong&gt;内核态中依然要遍历所有文件描述符&lt;/strong&gt;，每次调用需要拷贝全量描述符到内核态&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374176917.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;p&gt;POLL&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;#include &amp;lt;poll.h&amp;gt;
 struct pollfd &amp;#123;
@@ -1455,12 +1454,12 @@ int poll(struct pollfd *fds, nfds_t nfds, int timeout);
 &lt;p&gt;poll 数组如果已满，没有可用的位置存放新连接 accept 进来的文件描述符 cfd，那么就等待下一次处理。注意新连接的 cfd 不会丢弃，在 TCP 缓冲区中，等到 poll 数组中有可用的就可以继续连接了&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;如果有数据传入，则调用 read 返回 len，len=0 说明读取完毕，先 close 关闭该文件描述符，再将该结构体的文件描述符置为 - 1，fd [i].fd=-1&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374176918.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;h2 id=&#34;epoll-api-介绍&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#epoll-api-介绍&#34;&gt;#&lt;/a&gt; epoll API 介绍&lt;/h2&gt;
 &lt;p&gt;改进：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;首先调用 epoll_create 在 *&lt;em&gt;** 内核区创建 epoll 实例 **&lt;/em&gt;*—— 结构体数据&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;struct rb_root rbr;// 存放文件描述符，底层是红黑树 struct list_head rdlist;// 检测到发生改变的（有数据传入的）文件描述符，底层双链表&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374176919.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;p&gt;#include &amp;lt;sys/epoll.h&amp;gt;&lt;/p&gt;
 &lt;p&gt;//epoll_create 创建一个新的 epoll 实例，返回指向该实例的描述符 epollfd 用来调用所有 epoll 相关接口。在内核中创建了一个数据，这个数据中有两个比较重要的数据，一个是需要检测的文件描述符的信息（红黑树），还有一个是&lt;strong&gt;就绪列表&lt;/strong&gt;，存放检测到数据发生改变的文件描述符信息（双向链表）。&lt;/p&gt;
 &lt;p&gt;当 epollfd 不再使用时，需要调用 close () 关闭，当指向 epoll 的文件描述符关闭后内核会摧毁 epoll 实例并释放相关资源。&lt;/p&gt;
@@ -1550,7 +1549,7 @@ struct epoll_event &amp;#123;
 至于每次重用 event，而不会影响之前的已经在 rb tree 中传入的节点，应该是拷贝了 event 的数据。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;epoll的工作模式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#epoll的工作模式&#34;&gt;#&lt;/a&gt; Epoll 的工作模式&lt;/h3&gt;
-&lt;p&gt;&lt;img data-src=&#34;Linux%E9%AB%98%E6%80%A7%E8%83%BD%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%96%E7%A8%8B-socket%E7%AF%87/image-166848374176920.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;.png)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;LT 模式：水平触发（缺省工作方式）&lt;/p&gt;
